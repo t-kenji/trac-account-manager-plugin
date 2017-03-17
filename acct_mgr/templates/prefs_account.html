@@ -36,16 +36,46 @@
         </div>
       </form>
     </py:if>
+    <hr />
+    <h2>API Key</h2>
+    <form method="post" action="" id="acctmgr_api_key"
+          onsubmit="return confirm('${refresh_msg_confirm}');">
+      <div class="field">
+        <label>API Key:
+          <div class="apikey truncate autoexpand">${current_apikey}</div>
+        </label>
+      </div>
+      <div class="buttons">
+        <input type="hidden" name="action" value="refresh" />
+        <input type="submit"
+               value="${dgettext('acct_mgr', 'Refresh API Key')}" />
+      </div>
+    </form>
   </div>
   <!--! End insert -->
 
   <head>
     <title>Account</title>
-     <script type="text/javascript">
-       jQuery(document).ready(function($) {
-          $('#old_password').focus();
-       });
-     </script>
+    <script type="text/javascript">
+      jQuery(document).ready(function($) {
+         $('#old_password').focus();
+      });
+    </script>
+    <style type="text/css">
+    .apikey {
+      display: inline-block;
+      width: 120px;
+    }
+    .truncate {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      vertical-align: bottom;
+    }
+    .truncate.autoexpand:hover {
+      overflow: visible;
+    }
+    </style>
   </head>
 
   <!--! Commont content, will get wrapped in a form with 'save' button -->

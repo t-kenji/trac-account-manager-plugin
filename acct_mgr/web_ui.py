@@ -17,7 +17,7 @@ from acct_mgr.api import AccountManager, CommonTemplateProvider
 from acct_mgr.api import _, dgettext, ngettext, tag_
 from acct_mgr.db import SessionStore
 from acct_mgr.guard import AccountGuard
-from acct_mgr.model import set_user_attribute
+from acct_mgr.model import get_user_attribute, set_user_attribute
 from acct_mgr.notification import NotificationError
 from acct_mgr.register import RegistrationModule
 from acct_mgr.util import if_enabled
@@ -65,7 +65,11 @@ class AccountModule(CommonTemplateProvider):
 
     reset_password = BoolOption(
         'account-manager', 'reset_password', True,
-        "Set to False, if there is no email system setup.")
+        """Set to False, if there is no email system setup.""")
+    _apikey_chars = string.ascii_letters + string.digits
+    apikey_length = IntOption(
+        'account-manager', 'generated_apikey_length', 40,
+        """Length of the generated apikeys created for an account.""")
 
     def __init__(self):
         self.acctmgr = AccountManager(self.env)
@@ -177,6 +181,9 @@ class AccountModule(CommonTemplateProvider):
             'delete_enabled': delete_enabled,
             'delete_msg_confirm':
                 _("Are you sure you want to delete your account?"),
+            'current_apikey': self._get_user_apikey(req.authname),
+            'refresh_msg_confirm':
+                _("API-Key is changed, is it OK?"),
         }
         force_change_password = req.session.get('force_change_passwd', False)
         if req.method == 'POST':
@@ -189,6 +196,10 @@ class AccountModule(CommonTemplateProvider):
                     force_change_password = False
             elif action == 'delete' and delete_enabled:
                 self._do_delete(req)
+            elif action == 'refresh':
+                self._do_refresh_apikey(req)
+                data['current_apikey'] = self._get_user_apikey(req.authname)
+                add_notice(req, _("Refresh your API Key."))
         if force_change_password:
             add_warning(req, tag_(
                 "You are required to change password because of a recent "
@@ -244,6 +255,13 @@ class AccountModule(CommonTemplateProvider):
             req.session.save()
             req.redirect(req.href.logout())
 
+    def _do_refresh_apikey(self, req):
+        username = req.authname
+        if not username:
+            add_warning(req, _("Authentication is required."))
+        else:
+            self._refresh_apikey(req, username)
+
     def _do_reset_password(self, req):
         email = req.args.get('email')
         username = req.args.get('username')
@@ -267,6 +285,23 @@ class AccountModule(CommonTemplateProvider):
         """
         return ''.join([random.choice(self._password_chars)
                         for _ in xrange(self.password_length)])
+
+    @property
+    def _generate_apikey(self):
+        """
+        Generate a new apikey on user request.
+        """
+        return ''.join([random.choice(self._apikey_chars)
+                        for _ in xrange(self.apikey_length)])
+
+    def _get_user_apikey(self, username):
+        try:
+            attrs = get_user_attribute(self.env, username, None, 'apikey')
+            current_apikey = attrs[username][1].get('apikey')
+        except:
+            self.log.info('\'{}\' is API Key not used.'.format(username))
+            current_apikey = _('Please push "Refresh API Key" button.')
+        return current_apikey
 
     def _reset_password(self, req, username, email):
         """Store a new, temporary password on admin or user request.
@@ -301,6 +336,12 @@ class AccountModule(CommonTemplateProvider):
         if acctmgr.force_passwd_change:
             set_user_attribute(self.env, username, 'force_change_passwd', 1)
 
+    def _refresh_apikey(self, req, username):
+        """
+        Refresh api-key on user request.
+        """
+        apikey = self._generate_apikey
+        set_user_attribute(self.env, username, 'apikey', apikey)
 
 class LoginModule(auth.LoginModule, CommonTemplateProvider):
     """Custom login form and processing.
@@ -691,8 +732,18 @@ class LoginModule(auth.LoginModule, CommonTemplateProvider):
         self.log.debug("LoginModule._remote_user: Authentication attempted "
                        "for '%s'", username)
         password = req.args.get('password')
-        if not username:
+        apikey = req.environ.get('HTTP_X_TRAC_API_KEY')
+        if username is not None:
+            return self._remote_user_by_password(req, username, password)
+        elif apikey is not None:
+            return self._remote_user_by_apikey(req, apikey)
+        else:
             return None
+
+    def _remote_user_by_password(self, req, username, password):
+        """The real authentication using configured providers and stores."""
+        self.env.log.debug("LoginModule._remote_user: Authentication "
+                           "attempted for '%s'", username)
         acctmgr = AccountManager(self.env)
         acctmod = AccountModule(self.env)
         if acctmod.reset_password_enabled is True:
@@ -724,6 +775,18 @@ class LoginModule(auth.LoginModule, CommonTemplateProvider):
                 _set_password(self.env, req, username, password)
                 return username
         return None
+
+    def _remote_user_by_apikey(self, req, apikey):
+        """The real authentication using API Key."""
+        username = None
+        for acct, status in get_user_attribute(self.env,
+                                               authenticated=None,
+                                               attribute='apikey').iteritems():
+            if status[1].get('apikey') == apikey:
+                username = acct
+        self.env.log.debug("LoginModule._remote_user: Authentication "
+                           "attempted for '%s'", username)
+        return username
 
     def _format_ctxtnav(self, items):
         """Prepare context navigation items for display on login page."""

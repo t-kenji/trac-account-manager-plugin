@@ -689,8 +689,16 @@ msgstr ""
 msgid "Are you sure you want to delete your account?"
 msgstr ""
 
+#: acct_mgr/web_ui.py:185
+msgid "API-Key is changed, is it OK?"
+msgstr ""
+
 #: acct_mgr/web_ui.py:190
 msgid "Thank you for taking the time to update your password."
+msgstr ""
+
+#: acct_mgr/web_ui.py:201
+msgid "Refresh your API Key."
 msgstr ""
 
 #: acct_mgr/web_ui.py:199
@@ -1958,6 +1966,18 @@ msgstr ""
 
 #: acct_mgr/templates/prefs_account.html:34
 msgid "Delete account"
+msgstr ""
+
+#: acct_mgr/templates/prefs_account.html:40
+msgid "API Key"
+msgstr ""
+
+#: acct_mgr/templates/prefs_account.html:44
+msgid "API Key:"
+msgstr ""
+
+#: acct_mgr/templates/prefs_account.html:51
+msgid "Refresh API Key"
 msgstr ""
 
 #: acct_mgr/templates/prefs_account.html:53

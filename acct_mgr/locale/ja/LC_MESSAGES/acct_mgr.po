@@ -420,9 +420,17 @@ msgstr "パスワードが思い出せない?"
 msgid "Are you sure you want to delete your account?"
 msgstr "本当にアカウントを削除しますか?"
 
+#: acct_mgr/web_ui.py:185
+msgid "API-Key is changed, is it OK?"
+msgstr "API キーが変更されますが、よろしいですか?"
+
 #: acct_mgr/web_ui.py:162
 msgid "Thank you for taking the time to update your password."
 msgstr "パスワードの更新に時間を割いてくれてありがとうございます。"
+
+#: acct_mgr/web_ui.py:201
+msgid "Refresh your API Key."
+msgstr "API キーが再生成されました。"
 
 #: acct_mgr/web_ui.py:171
 msgid ""
@@ -901,6 +909,19 @@ msgstr "アカウントの削除"
 msgid "Delete account"
 msgstr "アカウントの削除"
 
+#: acct_mgr/templates/prefs_account.html:40
+msgid "API Key"
+msgstr "API キー"
+
+#: acct_mgr/templates/prefs_account.html:44
+msgid "API Key:"
+msgstr "API キー:"
+
+#: acct_mgr/templates/prefs_account.html:51
+msgid "Refresh API Key"
+msgstr "API キーの再生成"
+
+#: acct_mgr/templates/prefs_account.html:53
 #: acct_mgr/templates/prefs_account.html:54
 msgid "Change Password"
 msgstr "パスワードの変更"
