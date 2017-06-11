@@ -10,104 +10,39 @@ msgid ""
 msgstr ""
 "Project-Id-Version: TracAccountManager 0.4\n"
 "Report-Msgid-Bugs-To: hoff.st@shaas.net\n"
-"POT-Creation-Date: 2012-11-30 22:50+0100\n"
+"POT-Creation-Date: 2017-06-11 01:04+0000\n"
 "PO-Revision-Date: 2012-09-16 19:02+0000\n"
 "Last-Translator: Евгений Ковыряшкин <seventhstar@mail.ru>\n"
+"Language: ru\n"
 "Language-Team: Russian <trac-dev@googlegroups.com>\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 1.0dev-r482\n"
+"Generated-By: Babel 2.4.0\n"
 
-#: acct_mgr/admin.py:69
+#: acct_mgr/admin.py:57
 #, python-format
 msgid "Locked until %(t_release)s"
 msgstr "Заблокировано до  %(t_release)s"
 
-#: acct_mgr/admin.py:153
-#, python-format
-msgid "Invalid key type (%s) for StoreOrder"
+#: acct_mgr/admin.py:169
+#, fuzzy, python-format
+msgid "Invalid key type (%s) for ExtensionOrder"
 msgstr "Недопустимый тип ключа (%s) для StoreOrder"
 
-#: acct_mgr/admin.py:196 acct_mgr/admin.py:198 acct_mgr/notification.py:171
+#: acct_mgr/admin.py:212 acct_mgr/admin.py:895 acct_mgr/notification.py:191
 #: acct_mgr/templates/admin_users.html:14
+#: acct_mgr/templates/admin_users.html:158
 msgid "Accounts"
 msgstr "Учетные записи"
 
-#: acct_mgr/admin.py:196
-msgid "Configuration"
-msgstr "Настройки"
-
-#: acct_mgr/admin.py:198
+#: acct_mgr/admin.py:212
 msgid "Users"
 msgstr "Пользователи"
 
-#: acct_mgr/admin.py:249
-msgid ""
-"Error while reading configuration -\n"
-"                              Hint: Enable/install the required component."
-msgstr ""
-
-#: acct_mgr/admin.py:298
-msgid "Password hash refresh procedure restarted."
-msgstr ""
-
-#: acct_mgr/admin.py:368
-msgid "The password store does not support creating users."
-msgstr "Хранилище паролей не поддерживает создание пользователей."
-
-#: acct_mgr/admin.py:379
-msgid "The password reset procedure is not enabled."
-msgstr "Процедура сброса пароля не разрешена."
-
-#: acct_mgr/admin.py:389
-msgid "The password store does not support deleting users."
-msgstr "Хранилище паролей не поддерживает удаление пользователей."
-
-#: acct_mgr/admin.py:394
-msgid "Email Address"
-msgstr "Электронный адрес"
-
-#: acct_mgr/admin.py:395
-msgid "Pre-/Surname (Nickname)"
-msgstr "Фамилия (ник)"
-
-#: acct_mgr/admin.py:396
-msgid "Password"
-msgstr "Пароль"
-
-#: acct_mgr/admin.py:405 acct_mgr/register.py:98
-msgid "Username cannot be empty."
-msgstr "Имя пользователя не может быть пустым."
-
-#: acct_mgr/admin.py:410
-#, python-format
-msgid "Unknown user %(user)s."
-msgstr "Неизвестный пользователь %(user)s."
-
-#: acct_mgr/admin.py:418 acct_mgr/register.py:150 acct_mgr/web_ui.py:226
-msgid "The passwords must match."
-msgstr "Пароли должны совпадать."
-
-#: acct_mgr/admin.py:423
-msgid ""
-"The password store does not support\n"
-"                                changing passwords.\n"
-"                                "
-msgstr "Хранилище паролей не поддерживает изменение паролей."
-
-#: acct_mgr/admin.py:464
-msgid "Please choose account by username from list to proceed."
-msgstr "Пожалуйста выберите учетную запись из списка для продолжения."
-
-#: acct_mgr/admin.py:480
-#, python-format
-msgid "Failed login attempts for user %(user)s deleted"
-msgstr "Неудачные попытки входа для пользователя %(user)s удалены"
-
-#: acct_mgr/admin.py:607
+#: acct_mgr/admin.py:289
 #, python-format
 msgid "%(count)s account"
 msgid_plural "%(count)s accounts"
@@ -115,7 +50,7 @@ msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
 
-#: acct_mgr/admin.py:614
+#: acct_mgr/admin.py:296
 #, python-format
 msgid "%(count)s account attribute"
 msgid_plural "%(count)s account attributes"
@@ -123,36 +58,287 @@ msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
 
-#: acct_mgr/admin.py:619
-msgid "Successfully deleted:"
+#: acct_mgr/admin.py:302
+#, fuzzy, python-format
+msgid "Successfully deleted: %(account)s"
+msgstr "Удалить учетную запись"
+
+#: acct_mgr/admin.py:314 acct_mgr/admin.py:537
+#, fuzzy
+msgid "Back to Accounts"
+msgstr "Создать учетную запись"
+
+#: acct_mgr/admin.py:326
+#, fuzzy
+msgid "Please choose account by username from the list to proceed."
+msgstr "Пожалуйста выберите учетную запись из списка для продолжения."
+
+#: acct_mgr/admin.py:356
+msgid "Email Address"
+msgstr "Электронный адрес"
+
+#: acct_mgr/admin.py:357
+msgid "Pre-/Surname (Nickname)"
+msgstr "Фамилия (ник)"
+
+#: acct_mgr/admin.py:358
+msgid "Password"
+msgstr "Пароль"
+
+#: acct_mgr/admin.py:375 acct_mgr/admin.py:382
+#, python-format
+msgid "Deleted %(attribute)s for %(username)s."
 msgstr ""
 
+#: acct_mgr/admin.py:387 acct_mgr/register.py:155 acct_mgr/web_ui.py:224
+msgid "The passwords must match."
+msgstr "Пароли должны совпадать."
+
+#: acct_mgr/admin.py:421
+#, python-format
+msgid "Updated %(attributes)s for %(username)s."
+msgstr ""
+
+#: acct_mgr/admin.py:434
+#, python-format
+msgid "Update error in table %(table)s: %(message)s"
+msgstr ""
+
+#: acct_mgr/admin.py:448
+#, python-format
+msgid "Table %(table)s column %(column)s%(constraint)s: %(result)s change"
+msgid_plural "Table %(table)s column %(column)s%(constraint)s: %(result)s changes"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+#: acct_mgr/admin.py:495
+#, python-format
+msgid "Account lock (%(condition)s) for user %(user)s cleared"
+msgstr ""
+
+#: acct_mgr/admin.py:501
+#, python-format
+msgid "Failed login attempts for user %(user)s deleted"
+msgstr "Неудачные попытки входа для пользователя %(user)s удалены"
+
+#. TRANSLATOR: Optionally tabbed account editor's label
+#: acct_mgr/admin.py:528
+#, fuzzy
+msgid "Modify Account Attributes"
+msgstr ""
+
+#: acct_mgr/admin.py:530
+#, fuzzy
+msgid "Change User ID"
+msgstr "Изменить пароль"
+
+#: acct_mgr/admin.py:597 acct_mgr/admin.py:648
+msgid "revoked"
+msgstr ""
+
+#: acct_mgr/admin.py:604
+#, python-format
+msgid "Approved account: %(accounts)s"
+msgid_plural "Approved accounts: %(accounts)s"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+#: acct_mgr/admin.py:613
+#, python-format
+msgid "Banned account: %(accounts)s"
+msgid_plural "Banned accounts: %(accounts)s"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+#: acct_mgr/admin.py:625
+#, python-format
+msgid "Password reset for %(accounts)s."
+msgstr ""
+
+#: acct_mgr/admin.py:627
+msgid "The password reset procedure is not enabled."
+msgstr "Процедура сброса пароля не разрешена."
+
+#: acct_mgr/admin.py:637
+#, fuzzy, python-format
+msgid "Deleted account: %(accounts)s"
+msgstr "Удалить учетную запись"
+
 #: acct_mgr/admin.py:639
+msgid "The password store does not support deleting users."
+msgstr "Хранилище паролей не поддерживает удаление пользователей."
+
+#: acct_mgr/admin.py:647
+#, fuzzy
+msgid "active"
+msgstr "Сохранить"
+
+#: acct_mgr/admin.py:649
+msgid "pending approval"
+msgstr ""
+
+#: acct_mgr/admin.py:652
+msgid "email unverified"
+msgstr ""
+
+#: acct_mgr/admin.py:673
+#, fuzzy
+msgid "Are you sure you want to delete these accounts?"
+msgstr "Вы уверены, что хотите удалить свою учетную запись?"
+
+#: acct_mgr/admin.py:713
+#, python-format
+msgid "Removing the old user is not supported by %(store)s."
+msgstr ""
+
+#: acct_mgr/admin.py:730 acct_mgr/admin.py:1579
+msgid "None of the configured password stores is writable."
+msgstr ""
+
+#: acct_mgr/admin.py:734
+msgid "Password reset is a required action, but disabled yet."
+msgstr ""
+
+#: acct_mgr/admin.py:744
+#, python-format
+msgid "At least %(required_check)s must be configured and enabled."
+msgstr ""
+
+#: acct_mgr/admin.py:775
+msgid "Failed to save new login data to a password store."
+msgstr ""
+
+#: acct_mgr/admin.py:805
+#, python-format
+msgid ""
+"Cannot send the new password to the user, because no email address is "
+"associated with %(username)s."
+msgstr ""
+
+#: acct_mgr/admin.py:813 acct_mgr/admin.py:827 acct_mgr/admin.py:840
+#: acct_mgr/admin.py:1564 acct_mgr/register.py:447 acct_mgr/register.py:464
+#: acct_mgr/register.py:605 acct_mgr/register.py:641 acct_mgr/web_ui.py:317
+#: acct_mgr/web_ui.py:807
+msgid "Error raised while sending a change notification."
+msgstr ""
+
+#: acct_mgr/admin.py:815 acct_mgr/admin.py:829 acct_mgr/admin.py:842
+#: acct_mgr/admin.py:1566 acct_mgr/web_ui.py:319
+msgid "You'll get details with TracLogging enabled."
+msgstr ""
+
+#: acct_mgr/admin.py:858
 #, python-format
 msgid "page %(num)s"
 msgstr ""
 
-#: acct_mgr/admin.py:650
+#: acct_mgr/admin.py:869
 msgid "Next Page"
 msgstr ""
 
-#: acct_mgr/admin.py:655
+#: acct_mgr/admin.py:872
 msgid "Previous Page"
 msgstr ""
 
-#: acct_mgr/api.py:167
-msgid "Ordered list of password stores, queried in turn."
+#: acct_mgr/admin.py:895 acct_mgr/templates/admin_accountsconfig.html:438
+msgid "Configuration"
+msgstr "Настройки"
+
+#: acct_mgr/admin.py:949
+msgid "Password hash refresh procedure restarted."
 msgstr ""
 
-#: acct_mgr/api.py:238
+#: acct_mgr/admin.py:1151
+msgid "Your changes have been saved."
+msgstr ""
+
+#: acct_mgr/admin.py:1154
+msgid ""
+"Your changes are cached until you either drop or save them all (see last "
+"step)."
+msgstr ""
+
+#: acct_mgr/admin.py:1173
+#, fuzzy
+msgid "Authentication Options"
+msgstr "Варианты уведомлений"
+
+#: acct_mgr/admin.py:1174 acct_mgr/admin.py:1432
+#, fuzzy
+msgid "Password Store"
+msgstr "Неправильный пароль."
+
+#: acct_mgr/admin.py:1175
+#, fuzzy
+msgid "Password Policy"
+msgstr "Пароль"
+
+#: acct_mgr/admin.py:1176
+#, fuzzy
+msgid "Account Policy"
+msgstr "Учетная запись заблокирована"
+
+#: acct_mgr/admin.py:1177 acct_mgr/admin.py:1451
+#, fuzzy
+msgid "Account Guard"
+msgstr "Учетная запись"
+
+#: acct_mgr/admin.py:1178
+#, fuzzy
+msgid "Initialization"
+msgstr "Уведомление"
+
+#: acct_mgr/admin.py:1222 acct_mgr/admin.py:1350
 #, python-format
 msgid ""
-"The authentication backend for user %s does not support\n"
-"                setting the password.\n"
-"                "
+"Error while reading configuration - Hint: Enable/install required "
+"component '%s'."
 msgstr ""
 
-#: acct_mgr/api.py:250
+#: acct_mgr/admin.py:1437
+msgid "Password Reset"
+msgstr "Сброс пароля"
+
+#: acct_mgr/admin.py:1445
+#, fuzzy
+msgid "Account Registration"
+msgstr "Уведомления"
+
+#: acct_mgr/admin.py:1458
+#, fuzzy
+msgid "Admin user account"
+msgstr "Управление пользователями"
+
+#: acct_mgr/admin.py:1462
+#, fuzzy
+msgid "Configuration Review"
+msgstr "Настройки"
+
+#: acct_mgr/admin.py:1537
+msgid "Initial Trac authentication setup launched."
+msgstr ""
+
+#: acct_mgr/admin.py:1575
+#, python-format
+msgid "Account %(username)s created."
+msgstr ""
+
+#: acct_mgr/api.py:255
+#, python-format
+msgid ""
+"The authentication backend for user %(user)s does not support setting the"
+" password."
+msgstr ""
+
+#: acct_mgr/api.py:272
+#, python-format
+msgid "Password for user %s existed, couldn't create."
+msgstr ""
+
+#: acct_mgr/api.py:277
 msgid ""
 "None of the IPasswordStore components listed in the\n"
 "                trac.ini supports setting the password or creating users."
@@ -162,11 +348,16 @@ msgstr ""
 "Ни один из компонентов IPasswordStore, перечисленных в\n"
 "trac.ini, не поддерживает установку пароля или создание пользователей."
 
-#: acct_mgr/db.py:23
-msgid "IPasswordHashMethod used to create new/updated passwords"
+#: acct_mgr/api.py:467
+msgid "Account is pending approval. You may need to contact your administrator."
 msgstr ""
 
-#: acct_mgr/htfile.py:144
+#: acct_mgr/htfile.py:89
+#, python-format
+msgid "[%(section)s] %(name)s option for the password file is not configured"
+msgstr ""
+
+#: acct_mgr/htfile.py:140
 msgid ""
 "The password file could not be read. Trac requires\n"
 "                    read and write access to both the password file\n"
@@ -175,7 +366,7 @@ msgstr ""
 "Не удалось прочитать файл паролей. Trac требуются\n"
 "права на чтение и запись файла паролей и его родительского каталога."
 
-#: acct_mgr/htfile.py:162
+#: acct_mgr/htfile.py:158
 msgid ""
 "The password file could not be updated. Trac requires\n"
 "                    read and write access to both the password file\n"
@@ -184,314 +375,416 @@ msgstr ""
 "Не удалось обновить файл паролей. Trac требуются\n"
 "права на чтение и запись файла паролей и его родительского каталога."
 
-#: acct_mgr/htfile.py:198 acct_mgr/htfile.py:239
-msgid ""
-"Path relative to Trac environment or full host machine\n"
-"                path to password file"
-msgstr ""
-"Путь к файлу паролей относительно окружения Trac или полный путь на "
-"сервере"
-
-#: acct_mgr/htfile.py:201 acct_mgr/pwhash.py:42
-msgid "Default hash type of new/updated passwords"
-msgstr "Тип хэша поп умолчанию для новых/обновленных паролей"
-
-#: acct_mgr/htfile.py:242
-msgid "Realm to select relevant htdigest file entries"
-msgstr ""
-
-#: acct_mgr/http.py:27
-msgid "URL of the HTTP authentication service"
-msgstr "URL служба аутентификации по HTTP"
-
-#: acct_mgr/macros.py:95
+#: acct_mgr/macros.py:92
 #, python-format
 msgid "(required %(perm)s missing)"
 msgstr ""
 
-#: acct_mgr/notification.py:53
+#: acct_mgr/notification.py:54
 msgid "The email and username do not match a known account."
 msgstr "Имя пользователя и адрес не соответствуют существующей учетной записи."
 
-#: acct_mgr/notification.py:171
+#: acct_mgr/notification.py:192
 msgid "Notification"
 msgstr "Уведомление"
 
-#: acct_mgr/pwhash.py:58
-msgid "Realm to select relevant htdigest db entries"
-msgstr ""
-
-#: acct_mgr/pwhash.py:116
-msgid ""
-"The \"crypt\" module is unavailable\n"
-"                                    on this platform."
+#: acct_mgr/pwhash.py:130
+#, fuzzy
+msgid "The \"crypt\" module is unavailable on this platform."
 msgstr "Модуль \"crypt\" недоступен для этой платформы."
 
-#: acct_mgr/pwhash.py:123
+#: acct_mgr/pwhash.py:137
 msgid ""
 "Neither are \"sha2\" hash algorithms supported by the\n"
 "                    \"crypt\" module on this platform nor is \"passlib\"\n"
 "                    available."
 msgstr ""
 
-#: acct_mgr/register.py:43
+#: acct_mgr/register.py:42
 msgid "Registration Error"
 msgstr ""
 
-#: acct_mgr/register.py:76
+#: acct_mgr/register.py:78
 #, python-format
 msgid "No check method 'validate_registration' defined in %(module)s"
 msgstr ""
 
-#: acct_mgr/register.py:112
+#: acct_mgr/register.py:84
+msgid ""
+"A collection of basic checks.\n"
+"\n"
+"This includes checking for\n"
+" * emptiness (no user input for username and/or password)\n"
+" * some blacklisted username characters\n"
+" * upper-cased usernames (reserved for Trac permission actions)\n"
+" * some reserved usernames\n"
+" * a username duplicate in configured password stores\n"
+"\n"
+"''This check is bypassed for requests regarding user's own preferences.''"
+msgstr ""
+
+#: acct_mgr/register.py:106
+msgid "Username cannot be empty."
+msgstr "Имя пользователя не может быть пустым."
+
+#: acct_mgr/register.py:120
 #, python-format
 msgid "The username must not contain any of these characters: %s"
 msgstr "Имя пользователя не должно содержать этих символов: %s"
 
-#: acct_mgr/register.py:119
+#: acct_mgr/register.py:127
 msgid "A username with only upper-cased characters is not allowed."
 msgstr ""
 
-#: acct_mgr/register.py:126
+#: acct_mgr/register.py:133
 #, python-format
 msgid "Username %s is not allowed."
 msgstr "Имя пользователя %s недопустимо."
 
-#: acct_mgr/register.py:139 acct_mgr/register.py:319
+#: acct_mgr/register.py:148 acct_mgr/register.py:364
 #, python-format
 msgid ""
-"Another account or group already exists, who's name differs from %s only "
-"by case or is identical."
+"Another account or group already exists, who's name differs from "
+"%(username)s only by case or is identical."
 msgstr ""
 
-#: acct_mgr/register.py:148 acct_mgr/web_ui.py:223 acct_mgr/web_ui.py:240
+#: acct_mgr/register.py:153 acct_mgr/web_ui.py:222 acct_mgr/web_ui.py:241
 msgid "Password cannot be empty."
 msgstr "Пароль не может быть пустым."
 
-#: acct_mgr/register.py:172
-#, python-format
+#: acct_mgr/register.py:160
 msgid ""
-"Please type [%(token)s] as verification token,\n"
-"                exactly replicating everything within the braces."
+"A collection of simple bot checks.\n"
+"\n"
+"''This check is bypassed for requests by an authenticated user.''"
 msgstr ""
 
-#: acct_mgr/register.py:174
+#. TRANSLATOR: Question-style hint for visible bot trap
+#. registration input field.
+#: acct_mgr/register.py:187
+#, python-format
+msgid "Please answer above: %(question)s"
+msgstr ""
+
+#: acct_mgr/register.py:196
+#, python-format
+msgid ""
+"Please type [%(token)s] as verification token, exactly replicating "
+"everything within the braces."
+msgstr ""
+
+#: acct_mgr/register.py:198
 msgid "Parole:"
 msgstr ""
 
-#: acct_mgr/register.py:184
+#: acct_mgr/register.py:207
 msgid "Better do not fill this field."
 msgstr ""
 
-#: acct_mgr/register.py:195
+#: acct_mgr/register.py:219
 msgid "Are you human? If so, try harder!"
 msgstr ""
 
-#: acct_mgr/register.py:209
+#: acct_mgr/register.py:224
+msgid ""
+"A collection of checks for email addresses.\n"
+"\n"
+"''This check is bypassed, if account verification is disabled.''"
+msgstr ""
+
+#: acct_mgr/register.py:235
 msgid "Email:"
 msgstr "Электронный адрес:"
 
 #. TRANSLATOR: Registration form hints for a mandatory input field.
-#: acct_mgr/register.py:220
+#: acct_mgr/register.py:245
 msgid ""
-"The email address is required for Trac to send\n"
-"                           you a verification token."
+"\n"
+"                The email address is required for Trac to send you a\n"
+"                verification token.\n"
+"                "
 msgstr ""
 
-#: acct_mgr/register.py:223
+#: acct_mgr/register.py:250
 msgid ""
-"Entering your email address will also enable you\n"
-"                           to reset your password if you ever forget it."
+"\n"
+"                    Entering your email address will also enable you to "
+"reset\n"
+"                    your password if you ever forget it.\n"
+"                    "
 msgstr ""
 
 #. TRANSLATOR: Registration form hint, if email input is optional.
-#: acct_mgr/register.py:231
+#: acct_mgr/register.py:257
 msgid ""
 "Entering your email address will enable you to\n"
 "                           reset your password if you ever forget it."
 msgstr ""
 
-#: acct_mgr/register.py:246
+#: acct_mgr/register.py:271
 msgid "You must specify a valid email address."
 msgstr "Нужно указать существующий электронный адрес."
 
-#: acct_mgr/register.py:250
+#: acct_mgr/register.py:279
 msgid ""
 "The email address specified is already in use. Please specify a different"
 " one."
 msgstr ""
 
-#: acct_mgr/register.py:277
+#: acct_mgr/register.py:287
+msgid ""
+"A collection of checks based on regular expressions.\n"
+"\n"
+"''It depends on !EmailCheck being enabled too for using it's input field."
+"\n"
+"Likewise email checking is bypassed, if account verification is\n"
+"disabled.''"
+msgstr ""
+
+#: acct_mgr/register.py:316
 #, python-format
 msgid "Username %s doesn't match local naming policy."
 msgstr ""
 
-#: acct_mgr/register.py:287
+#: acct_mgr/register.py:328
 msgid ""
 "The email address specified appears to be invalid. Please specify a valid"
 " email address."
 msgstr ""
 
-#: acct_mgr/register.py:364 acct_mgr/templates/login.html:58
+#: acct_mgr/register.py:335
+msgid ""
+"Check for usernames referenced in the permission system.\n"
+"\n"
+"''This check is bypassed for requests by an authenticated user.''"
+msgstr ""
+
+#: acct_mgr/register.py:411 acct_mgr/templates/login.html:58
 #: acct_mgr/templates/login.html:61 acct_mgr/templates/register.html:14
 msgid "Register"
 msgstr "Регистрация"
 
-#: acct_mgr/register.py:407
-#, python-format
-msgid ""
-"Your username has been successfully registered but\n"
-"                        your account still requires activation. Please "
-"login\n"
-"                        as user %(user)s, and follow the instructions."
+#: acct_mgr/register.py:426 acct_mgr/register.py:430
+msgid "Invalid request arguments."
 msgstr ""
 
-#: acct_mgr/register.py:413
+#: acct_mgr/register.py:449 acct_mgr/register.py:466 acct_mgr/register.py:607
+#: acct_mgr/register.py:642 acct_mgr/web_ui.py:321 acct_mgr/web_ui.py:809
+msgid "You should report that issue to a Trac admin."
+msgstr ""
+
+#: acct_mgr/register.py:458
+msgid "pending"
+msgstr ""
+
+#: acct_mgr/register.py:472
+msgid ""
+"Your username has been registered successfully, but your account requires"
+" administrative approval. Please proceed according to local policy."
+msgstr ""
+
+#: acct_mgr/register.py:482
 #, python-format
 msgid ""
-"Registration has been finished successfully.\n"
-"                     You may log in as user %(user)s now."
+"Your username has been successfully registered but your account still "
+"requires activation. Please login as user %(user)s, and follow the "
+"instructions."
+msgstr ""
+
+#: acct_mgr/register.py:487
+#, python-format
+msgid ""
+"Registration has been finished successfully. You may log in as user "
+"%(user)s now."
 msgstr ""
 
 #. TRANSLATOR: Your permissions have been limited until you ...
-#: acct_mgr/register.py:492
+#: acct_mgr/register.py:577
 msgid "verify your email address"
 msgstr "подтвердите свой электронный адрес"
 
 #. TRANSLATOR: ... verify your email address
-#: acct_mgr/register.py:496
+#: acct_mgr/register.py:581
 #, python-format
 msgid "Your permissions have been limited until you %(link)s."
 msgstr "Ваши разрешения ограничены до тех пор, пока вы не %(link)s."
 
 #. TRANSLATOR: An email has been sent to <%(email)s>
 #. with a token to ... (the link label for following message)
-#: acct_mgr/register.py:523
+#: acct_mgr/register.py:613
 msgid "verify your new email address"
 msgstr "проверки вашего нового электронного адреса"
 
 #. TRANSLATOR: ... verify your new email address
-#: acct_mgr/register.py:527
-#, python-format
-msgid ""
-"An email has been sent to <%(email)s> with a token to\n"
-"                %(link)s."
+#: acct_mgr/register.py:618
+#, fuzzy, python-format
+msgid "An email has been sent to <%(email)s> with a token to %(link)s."
 msgstr "На адрес <%(email)s> выслано письмо со словом для %(link)s."
 
-#: acct_mgr/register.py:540
+#: acct_mgr/register.py:628
 msgid "Please log in to finish email verification procedure."
 msgstr "Для завершения проверки электронного адреса пожалуйста выполните вход."
 
-#: acct_mgr/register.py:545
+#: acct_mgr/register.py:632
 msgid "Your email is already verified."
 msgstr "Ваш адрес уже проверен"
 
-#: acct_mgr/register.py:553
+#: acct_mgr/register.py:648
 #, python-format
 msgid "A notification email has been resent to <%s>."
 msgstr "Уведомление повторно отправлено  <%s>."
 
-#: acct_mgr/register.py:561
+#: acct_mgr/register.py:656
 msgid "Thank you for verifying your email address."
 msgstr "Спасибо за подтверждение электронного адреса"
 
-#: acct_mgr/register.py:565
+#: acct_mgr/register.py:659
 msgid "Invalid verification token"
 msgstr "Неправильное проверочное слово"
 
-#: acct_mgr/svnserve.py:28
-msgid ""
-"Path to the users file; leave blank to locate\n"
-"                the users file by reading svnserve.conf"
-msgstr ""
-"Путь к файлу пользователей; оставьте пустым чтоб использовать\n"
-"путь, заданный в svnserve.conf"
-
-#. TRANSLATOR: Sync with same msgid in Trac 0.13, please.
-#: acct_mgr/util.py:78 acct_mgr/util.py:83
+#: acct_mgr/util.py:109
 #, python-format
-msgid "%(relativetime)s ago"
+msgid "less than %s"
 msgstr ""
 
-#: acct_mgr/web_ui.py:89 acct_mgr/templates/db_cleanup.html:52
-#: acct_mgr/templates/prefs_account.html:45
-#: acct_mgr/templates/user_table.html:20
-msgid "Account"
-msgstr "Учетная запись"
+#: acct_mgr/util.py:116
+#, python-format
+msgid "%(num)i second"
+msgid_plural "%(num)i seconds"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
 
-#: acct_mgr/web_ui.py:138 acct_mgr/templates/login.html:45
-#: acct_mgr/templates/login.html:66 acct_mgr/templates/login.html:69
+#. TRANSLATOR: Pretty datetime representation, time part provided by
+#. string substitution.
+#: acct_mgr/util.py:125
+#, python-format
+msgid "%(num)i day %%s"
+msgid_plural "%(num)i days %%s"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+#: acct_mgr/templates/login.html:45 acct_mgr/templates/login.html:66
+#: acct_mgr/templates/login.html:69 acct_mgr/web_ui.py:103
 msgid "Forgot your password?"
 msgstr "Забыли пароль?"
 
-#: acct_mgr/web_ui.py:152
+#: acct_mgr/templates/admin_account.html:14
+#: acct_mgr/templates/admin_db_cleanup.html:25
+#: acct_mgr/templates/prefs_account.html:58
+#: acct_mgr/templates/user_table.html:20 acct_mgr/web_ui.py:128
+msgid "Account"
+msgstr "Учетная запись"
+
+#: acct_mgr/web_ui.py:169
+#, fuzzy, python-format
+msgid ""
+"You're already logged in. If you need to change your password please use "
+"the %(prefs_href)s page."
+msgstr ""
+"Вы уже вошли. Если вам нужно сменить пароль, используйте страницу "
+"[1:Предпочтения]."
+
+#: acct_mgr/web_ui.py:183
 msgid "Are you sure you want to delete your account?"
 msgstr "Вы уверены, что хотите удалить свою учетную запись?"
 
-#: acct_mgr/web_ui.py:162
+#: acct_mgr/web_ui.py:186
+msgid "API-Key is changed, is it OK?"
+msgstr ""
+
+#: acct_mgr/web_ui.py:194
 msgid "Thank you for taking the time to update your password."
 msgstr "Спасибо что нашли время для изменения своего пароля."
 
-#: acct_mgr/web_ui.py:171
+#: acct_mgr/web_ui.py:202
+msgid "Refresh your API Key."
+msgstr ""
+
+#: acct_mgr/web_ui.py:207
+#, fuzzy, python-format
 msgid ""
 "You are required to change password because of a recent password change "
-"request. "
+"request. %(invitation)s"
 msgstr "Вам необходимо сменить пароль, из-за недавнего запроса на смену пароля."
 
-#: acct_mgr/web_ui.py:174
-msgid "Please change your password now."
-msgstr "Теперь, пожалуйста, смените пароль."
+#: acct_mgr/web_ui.py:216
+#, fuzzy
+msgid "Old password is incorrect."
+msgstr "Неправильный старый пароль."
 
-#: acct_mgr/web_ui.py:185
-msgid "Username is required"
+#: acct_mgr/web_ui.py:218
+#, fuzzy
+msgid "Old password cannot be empty."
+msgstr "Старый пароль не может быть пустым."
+
+#: acct_mgr/web_ui.py:226
+msgid "Password must not match old password."
+msgstr ""
+
+#: acct_mgr/web_ui.py:233
+#, fuzzy
+msgid "Password updated successfully."
+msgstr "Пароль удачно изменен."
+
+#: acct_mgr/web_ui.py:243
+msgid "Password is incorrect."
+msgstr "Неправильный пароль."
+
+#: acct_mgr/web_ui.py:261
+#, fuzzy
+msgid "Authentication is required."
 msgstr "Требуется имя пользователя"
 
-#: acct_mgr/web_ui.py:187
-msgid "Email is required"
+#: acct_mgr/web_ui.py:269
+#, fuzzy
+msgid "Username is required."
+msgstr "Требуется имя пользователя"
+
+#: acct_mgr/web_ui.py:271
+#, fuzzy
+msgid "Email is required."
 msgstr "Требуется электронный адрес"
 
-#: acct_mgr/web_ui.py:193
-msgid "The email and username must match a known account."
+#: acct_mgr/web_ui.py:277
+#, fuzzy
+msgid "Email and username must match a known account."
 msgstr ""
 "Имя пользователя и адрес должны соответствовать существующей учетной "
 "записи."
 
-#: acct_mgr/web_ui.py:217
-msgid "Old Password cannot be empty."
-msgstr "Старый пароль не может быть пустым."
+#: acct_mgr/web_ui.py:303
+msgid "Please push \"Refresh API Key\" button."
+msgstr ""
 
-#: acct_mgr/web_ui.py:219
-msgid "Old Password is incorrect."
-msgstr "Неправильный старый пароль."
+#: acct_mgr/web_ui.py:327
+#, python-format
+msgid "Cannot reset password: %(error)s"
+msgstr ""
 
-#: acct_mgr/web_ui.py:233
-msgid "Password successfully updated."
-msgstr "Пароль удачно изменен."
-
-#: acct_mgr/web_ui.py:242
-msgid "Password is incorrect."
-msgstr "Неправильный пароль."
+#: acct_mgr/web_ui.py:334
+#, fuzzy, python-format
+msgid "A new password has been sent to you at <%(email)s>."
+msgstr "Новый пароль отправлен на ваш адрес %(email)s ."
 
 #. TRANSLATOR: Intentionally obfuscated login error
-#: acct_mgr/web_ui.py:368
+#: acct_mgr/web_ui.py:496
 msgid "Invalid username or password"
 msgstr "Неправильное имя или пароль"
 
-#: acct_mgr/web_ui.py:373
-#, python-format
-msgid ""
-"Account locked, please try again after\n"
-"                            %(release_time)s\n"
-"                            "
+#: acct_mgr/web_ui.py:504
+#, fuzzy, python-format
+msgid "Account locked, please try again after % (release_time)s"
 msgstr ""
 "Учетная запись заблокирована, пожалуйста повторите попытку через "
 "%(release_time)s"
 
-#: acct_mgr/web_ui.py:378 acct_mgr/templates/user_table.html:38
+#: acct_mgr/templates/user_table.html:44 acct_mgr/web_ui.py:507
 msgid "Account locked"
 msgstr "Учетная запись заблокирована"
 
-#: acct_mgr/web_ui.py:383
+#: acct_mgr/web_ui.py:512
 #, python-format
 msgid "Login after %(attempts)s failed attempt"
 msgid_plural "Login after %(attempts)s failed attempts"
@@ -499,58 +792,115 @@ msgstr[0] "Вход после %(attempts)s неудачной попытки"
 msgstr[1] "Вход после %(attempts)s неудачных попыток"
 msgstr[2] "Вход после %(attempts)s неудачных попыток"
 
-#: acct_mgr/templates/account_details.html:14
-msgid "Account Details"
-msgstr "Учетные записи"
-
-#: acct_mgr/templates/account_details.html:20
-msgid "Review User Account Details"
-msgstr "Проверьте детали учетной записи"
-
-#: acct_mgr/templates/account_details.html:22
+#: acct_mgr/opt/announcer/uid_chg.py:39 acct_mgr/opt/tracforms/uid_chg.py:37
 #, python-format
-msgid "for [1:%(name)s] ([2:%(user)s])"
-msgstr "для [1:%(name)s] ([2:%(user)s])"
+msgid ""
+"Unsupported db schema version, please update %(plugin)s to a recent "
+"version."
+msgstr ""
 
-#: acct_mgr/templates/account_details.html:25
-#, python-format
-msgid "for [1:%(user)s]"
-msgstr "для [1:%(user)s]"
+#: acct_mgr/templates/admin_account.html:25
+#, fuzzy
+msgid "Manage User Account"
+msgstr "Управление пользователями"
 
-#: acct_mgr/templates/account_details.html:34
+#: acct_mgr/templates/admin_account.html:27
+#: acct_mgr/templates/admin_account.html:30
+msgid "for"
+msgstr ""
+
+#: acct_mgr/templates/admin_account.html:33
+msgid "info"
+msgstr ""
+
+#: acct_mgr/templates/admin_account.html:33
+msgid "User ID change requires additional components enabled"
+msgstr ""
+
+#: acct_mgr/templates/admin_account.html:55
+#, fuzzy
+msgid "New Username:"
+msgstr "Имя пользователя:"
+
+#: acct_mgr/templates/admin_account.html:56
+msgid "Change user ID ('username')"
+msgstr ""
+
+#: acct_mgr/templates/admin_account.html:64
+msgid "Skip creating account and password reset"
+msgstr ""
+
+#: acct_mgr/templates/admin_account.html:66
+#, fuzzy
+msgid "Assume existing account"
+msgstr "Зарегистрировать учетную запись"
+
+#: acct_mgr/templates/admin_account.html:72
+msgid "Do not overwrite existing attributes"
+msgstr ""
+
+#: acct_mgr/templates/admin_account.html:74
+#, fuzzy
+msgid "Copy only new account attributes"
+msgstr ""
+
+#: acct_mgr/templates/admin_account.html:80
+#, fuzzy
+msgid "Skip final account deletion"
+msgstr "Уведомлять об удалении учетных записей"
+
+#: acct_mgr/templates/admin_account.html:82
+msgid "Leave old login data"
+msgstr ""
+
+#: acct_mgr/templates/admin_account.html:92
+#: acct_mgr/templates/admin_accountsconfig.html:894
+#: acct_mgr/templates/admin_users.html:96 acct_mgr/templates/login.html:38
+#: acct_mgr/templates/prefs_account.html:27 acct_mgr/templates/register.html:46
+msgid "Password:"
+msgstr "Пароль:"
+
+#: acct_mgr/templates/admin_account.html:100
+#: acct_mgr/templates/admin_accountsconfig.html:901
+#: acct_mgr/templates/admin_users.html:104
+#: acct_mgr/templates/prefs_account.html:97 acct_mgr/templates/register.html:52
+msgid "Confirm Password:"
+msgstr "Подтверждение пароля:"
+
+#: acct_mgr/templates/admin_account.html:109
+#: acct_mgr/templates/admin_users.html:115
+msgid "Pre-/Surname (Nickname):"
+msgstr "Фамилия (ник):"
+
+#: acct_mgr/templates/admin_account.html:113
+#: acct_mgr/templates/admin_account.html:123
+#, fuzzy
+msgid "Delete value"
+msgstr "Удалить учетную запись"
+
+#: acct_mgr/templates/admin_account.html:119
+#: acct_mgr/templates/admin_users.html:121
+#: acct_mgr/templates/reset_password.html:38
+msgid "Email Address:"
+msgstr "Электронный адрес:"
+
+#: acct_mgr/templates/admin_account.html:130
+#: acct_mgr/templates/admin_users.html:127
+msgid "Skip new email verification"
+msgstr ""
+
+#: acct_mgr/templates/admin_account.html:136
+#: acct_mgr/templates/admin_accountsconfig.html:978
+#: acct_mgr/templates/admin_accountsconfig.html:981
+#: acct_mgr/templates/admin_accountsnotification.html:50
+msgid "Apply changes"
+msgstr ""
+
+#: acct_mgr/templates/admin_account.html:147
 msgid "Account Status"
 msgstr "Состояние учетной записи"
 
-#: acct_mgr/templates/account_details.html:38
-#, python-format
-msgid ""
-"Credentials for this user are stored in AuthStore number\n"
-"              [1:%(order_num)s] (%(store)s)."
-msgstr ""
-"Регистрационные данные этого пользователя хранятся в AuthStore\n"
-"[1:%(order_num)s] (%(store)s)."
-
-#: acct_mgr/templates/account_details.html:42
-msgid "Username matching is set to [1:not case-sensitive]."
-msgstr "Сравниние имен пользователей [1:нерегистрозависимо]."
-
-#: acct_mgr/templates/account_details.html:44
-msgid "Username matching is set to [1:case-sensitive]."
-msgstr "Сравниние имен пользователей [1:регистрозависимо]"
-
-#: acct_mgr/templates/account_details.html:49
-msgid ""
-"No store provides credentials for this user,\n"
-"              so the user currently can't be authenticated and\n"
-"              access to this [1:account is effectively blocked],\n"
-"              while account details may still be available."
-msgstr ""
-"Ни одно хранилище не содержит регистрационных данных этого пользователя,\n"
-"по этому пользователь не может быть опознан и\n"
-"доступ к [1:учетной записи фактически заблокирован],\n"
-"но детали учетной записи могут быть по-прежнему доступны."
-
-#: acct_mgr/templates/account_details.html:61
+#: acct_mgr/templates/admin_account.html:150
 #, python-format
 msgid ""
 "[1:]\n"
@@ -561,185 +911,947 @@ msgstr ""
 "Эта учетная запись заблокирована до %(time)s[2:]\n"
 "и даже корректные попытки входа будут игнорироваться."
 
-#: acct_mgr/templates/account_details.html:66
+#: acct_mgr/templates/admin_account.html:155
 msgid "This account has been locked permanently."
 msgstr "Эта учетная запись заблокирована навсегда."
 
-#: acct_mgr/templates/account_details.html:70
+#: acct_mgr/templates/admin_account.html:159
 msgid "Release account lock"
 msgstr "Снять блокировку учетной записи"
 
-#: acct_mgr/templates/account_details.html:70
+#: acct_mgr/templates/admin_account.html:159
 msgid "Unlock"
 msgstr "Разблокировать"
 
-#: acct_mgr/templates/account_details.html:82
-#, python-format
-msgid ""
-"Lock condition has been met\n"
-"                    %(count)s time by now."
-msgid_plural ""
-"Lock condition has been met\n"
-"                    %(count)s times by now."
+#: acct_mgr/templates/admin_account.html:169
+#, fuzzy, python-format
+msgid "Time lock condition has been met %(count)s time by now."
+msgid_plural "Time lock condition has been met %(count)s times by now."
 msgstr[0] "Условие блокирования выполнено %(count)s раз."
 msgstr[1] "Условие блокирования выполнено %(count)s раза."
 msgstr[2] "Условие блокирования выполнено %(count)s раз."
 
-#: acct_mgr/templates/account_details.html:94
-#, python-format
+#: acct_mgr/templates/admin_account.html:184
+#, fuzzy, python-format
 msgid ""
 "Therefore after another failed login attempt authentication\n"
-"                  for this account would be retarded by %(time)s."
+"                for this account would be retarded by %(time)s."
 msgstr ""
 "По этому после следующей неудачной попытки вход в эту учетную запись\n"
 "будет возможен только через %(time)s."
 
-#: acct_mgr/templates/account_details.html:101
+#: acct_mgr/templates/admin_account.html:191
 msgid "Lock condition has not been met yet."
 msgstr "Условие блокирования еще не выполнено."
 
-#: acct_mgr/templates/account_details.html:107
+#: acct_mgr/templates/admin_account.html:195
 msgid "No constraints are set for this account."
 msgstr "Ограничения для этой учетной записи не заданы."
 
-#: acct_mgr/templates/account_details.html:116
-msgid "Verification"
-msgstr "Проверка"
+#: acct_mgr/templates/admin_account.html:201
+#, python-format
+msgid ""
+"Credentials for this user are stored in AuthStore number\n"
+"              [1:%(order_num)s] (%(store)s)."
+msgstr ""
+"Регистрационные данные этого пользователя хранятся в AuthStore\n"
+"[1:%(order_num)s] (%(store)s)."
 
-#: acct_mgr/templates/account_details.html:120
+#: acct_mgr/templates/admin_account.html:204
+msgid "Username matching is set to [1:not case-sensitive]."
+msgstr "Сравниние имен пользователей [1:нерегистрозависимо]."
+
+#: acct_mgr/templates/admin_account.html:206
+msgid "Username matching is set to [1:case-sensitive]."
+msgstr "Сравниние имен пользователей [1:регистрозависимо]"
+
+#: acct_mgr/templates/admin_account.html:210
+#, fuzzy
+msgid ""
+"No readable store provides credentials for this user,\n"
+"              so the user may not get authenticated and access to this\n"
+"              [1:account might be effectively blocked]."
+msgstr ""
+"Ни одно хранилище не содержит регистрационных данных этого пользователя,\n"
+"по этому пользователь не может быть опознан и\n"
+"доступ к [1:учетной записи фактически заблокирован],\n"
+"но детали учетной записи могут быть по-прежнему доступны."
+
+#: acct_mgr/templates/admin_account.html:216
 #, python-format
 msgid "Current email address: <%(email)s>"
 msgstr "Текущий электронный адрес: <%(email)s>"
 
-#: acct_mgr/templates/account_details.html:123
+#: acct_mgr/templates/admin_account.html:219
 msgid "This address has been verified successfully."
 msgstr "Этот адрес был удачно проверен."
 
-#: acct_mgr/templates/account_details.html:125
-#, python-format
+#: acct_mgr/templates/admin_account.html:221
+#, fuzzy, python-format
 msgid ""
 "Verification is pending\n"
-"                  ([1:token: '%(token)s' ])."
+"                ([1:token: '%(token)s' ])."
 msgstr ""
 "Проверка выполняется\n"
 "         ([1:проверочное слово: '%(token)s' ])."
 
-#: acct_mgr/templates/account_details.html:128
+#: acct_mgr/templates/admin_account.html:224
 msgid "This address has not been verified yet."
 msgstr "Этот адрес еще не был проверен."
 
-#: acct_mgr/templates/account_details.html:133
+#: acct_mgr/templates/admin_account.html:229
 msgid "No email address is registered for this account."
 msgstr "Для этой учетной записи не задан электронный адрес."
 
-#: acct_mgr/templates/account_details.html:141
+#: acct_mgr/templates/admin_account.html:234
 msgid "Access History"
 msgstr "Предыстория доступа"
 
-#: acct_mgr/templates/account_details.html:144
+#: acct_mgr/templates/admin_account.html:235
 #, python-format
 msgid "Last login: %(time)s"
 msgstr "Последний вход: %(time)s"
 
-#: acct_mgr/templates/account_details.html:146
+#: acct_mgr/templates/admin_account.html:237
 msgid "The user has not logged in before."
 msgstr "Пользователь еще не входил."
 
-#: acct_mgr/templates/account_details.html:150
+#: acct_mgr/templates/admin_account.html:239
 #, python-format
 msgid "Total failed attempts: %(count)s"
 msgstr "Всего неудачных попыток: %(count)s"
 
-#: acct_mgr/templates/account_details.html:151
+#: acct_mgr/templates/admin_account.html:240
 msgid "Table: Last failed login attempts log view"
 msgstr "Таблица: просмотр журнала последних неудачных входов"
 
-#: acct_mgr/templates/account_details.html:156
+#: acct_mgr/templates/admin_account.html:245
 msgid "IP address"
 msgstr "IP адрес"
 
-#: acct_mgr/templates/account_details.html:157
+#: acct_mgr/templates/admin_account.html:246
 msgid "Log time"
 msgstr "Время записи"
 
-#: acct_mgr/templates/account_details.html:168
+#: acct_mgr/templates/admin_account.html:257
 msgid "Delete login failure log"
 msgstr "Удалить журнал неудачных входов"
 
-#: acct_mgr/templates/account_details.html:168
+#: acct_mgr/templates/admin_account.html:257
 msgid "Delete Log"
 msgstr "Удалить журнал"
 
-#: acct_mgr/templates/account_details.html:175
+#: acct_mgr/templates/admin_account.html:264
 msgid "There is currently no failed login attempt logged."
 msgstr "В данный момент нет записей о неудачных входах."
 
-#: acct_mgr/templates/account_details.html:182
-#: acct_mgr/templates/db_cleanup.html:125
-msgid "Back to accounts"
-msgstr ""
-
-#: acct_mgr/templates/account_details.html:184
-#: acct_mgr/templates/db_cleanup.html:37
-msgid "Update"
-msgstr "Обновить"
+#: acct_mgr/templates/admin_account.html:269
+#: acct_mgr/templates/admin_accountsconfig.html:985
+#, fuzzy
+msgid "Refresh"
+msgstr "Обновление пароля"
 
 #: acct_mgr/templates/admin_accountsconfig.html:14
-#: acct_mgr/templates/admin_accountsconfig.html:18
+#: acct_mgr/templates/admin_accountsconfig.html:27
 msgid "Accounts: Configuration"
 msgstr "Учетные записи: настройки"
 
-#: acct_mgr/templates/admin_accountsconfig.html:62
-msgid "Password Refresh"
-msgstr "Обновление пароля"
+#: acct_mgr/templates/admin_accountsconfig.html:53
+#: acct_mgr/templates/admin_accountsconfig.html:971
+msgid "Apply changes and go back"
+msgstr ""
 
-#: acct_mgr/templates/admin_accountsconfig.html:65
-msgid "Silently update password hashes on next successful login."
-msgstr "Молча обновить хэш пароля при следующем удачном входе."
+#: acct_mgr/templates/admin_accountsconfig.html:53
+#: acct_mgr/templates/admin_accountsconfig.html:57
+#: acct_mgr/templates/admin_accountsconfig.html:971
+#: acct_mgr/templates/admin_accountsconfig.html:975
+msgid "Previous"
+msgstr ""
 
-#: acct_mgr/templates/admin_accountsconfig.html:68
-msgid "Restart"
+#: acct_mgr/templates/admin_accountsconfig.html:57
+#: acct_mgr/templates/admin_accountsconfig.html:975
+msgid "Go back"
+msgstr ""
+
+#: acct_mgr/templates/admin_accountsconfig.html:60
+#: acct_mgr/templates/admin_accountsconfig.html:988
+msgid "Apply changes and go on"
+msgstr ""
+
+#: acct_mgr/templates/admin_accountsconfig.html:60
+#: acct_mgr/templates/admin_accountsconfig.html:988
+msgid "Next"
+msgstr ""
+
+#: acct_mgr/templates/admin_accountsconfig.html:70
+#: acct_mgr/templates/admin_accountsconfig.html:256
+#: acct_mgr/templates/admin_accountsconfig.html:540
+#: acct_mgr/templates/admin_accountsconfig.html:589
+#: acct_mgr/templates/admin_accountsconfig.html:731
+#: acct_mgr/templates/admin_accountsconfig.html:856
+#, python-format
+msgid "Step %(step)s: %(label)s"
+msgstr ""
+
+#: acct_mgr/templates/admin_accountsconfig.html:73
+msgid "Objective for setting Authentication Options"
 msgstr ""
 
 #: acct_mgr/templates/admin_accountsconfig.html:74
-msgid "Persistent Sessions"
-msgstr "Хранимые сеансы"
-
-#: acct_mgr/templates/admin_accountsconfig.html:77
 msgid ""
-"Allow the user to be remembered across sessions without needing to\n"
-"          re-authenticate."
+"Decide, whether to use HTTP authentication (Trac default) or\n"
+"            a HTML login form provided by AccountManagerPlugin."
+msgstr ""
+
+#: acct_mgr/templates/admin_accountsconfig.html:78
+msgid ""
+"After initial login Trac sessions are authenticated per request\n"
+"            based on browser cookies.  Therefor a number of options "
+"provide\n"
+"            control over some critical browser cookie properties."
+msgstr ""
+
+#: acct_mgr/templates/admin_accountsconfig.html:84
+msgid "Provider-agnostic Authentication Options"
+msgstr ""
+
+#: acct_mgr/templates/admin_accountsconfig.html:89
+msgid "Convert login names to lower case on registration and login."
+msgstr ""
+
+#: acct_mgr/templates/admin_accountsconfig.html:92
+msgid ""
+"Adapt to careless username typing, where casing does not matter,\n"
+"              like on Windows.  Potentially troublesome, because [1:case\n"
+"              matters for Trac permission assignment lookup] anyway."
+msgstr ""
+
+#: acct_mgr/templates/admin_accountsconfig.html:102
+msgid "Check IP address for authentication."
+msgstr ""
+
+#: acct_mgr/templates/admin_accountsconfig.html:105
+msgid ""
+"Potentially troublesome for users with dynamic IP adress, but\n"
+"              disregarded for persistent sessions."
+msgstr ""
+
+#: acct_mgr/templates/admin_accountsconfig.html:114
+msgid "Restrict sending cookies to HTTPS connections."
+msgstr ""
+
+#: acct_mgr/templates/admin_accountsconfig.html:117
+msgid "Required, if the Trac instance is only accessible through HTTPS."
+msgstr ""
+
+#: acct_mgr/templates/admin_accountsconfig.html:129
+#, python-format
+msgid ""
+"Lifetime of the authentication cookie:\n"
+"              [1:]\n"
+"              seconds\n"
+"              [2:\n"
+"                (%(timedelta)s)\n"
+"              ]"
+msgstr ""
+
+#: acct_mgr/templates/admin_accountsconfig.html:140
+msgid ""
+"Determines how long the browser will cache authentication\n"
+"              information, and therefore, after how much inactivity a "
+"user\n"
+"              will have to log in again.  Default (0 s) makes cookie\n"
+"              expire at browsing sessions end."
+msgstr ""
+
+#: acct_mgr/templates/admin_accountsconfig.html:148
+msgid "Authentication Front-end"
+msgstr ""
+
+#: acct_mgr/templates/admin_accountsconfig.html:153
+msgid ""
+"Use HTTP authentication and credentials as configured in and\n"
+"              provided by your web-server."
+msgstr ""
+
+#: acct_mgr/templates/admin_accountsconfig.html:157
+msgid ""
+"You can still manage some password stores with\n"
+"              AccountManagerPlugin, if you configure them in the next "
+"step."
+msgstr ""
+
+#: acct_mgr/templates/admin_accountsconfig.html:164
+msgid ""
+"Use a HTML login form backed by one or more password stores\n"
+"              managed by AccountManagerPlugin."
+msgstr ""
+
+#: acct_mgr/templates/admin_accountsconfig.html:168
+msgid ""
+"AccountManagerPlugin provides a custom version of the\n"
+"              [1:LoginModule] accompanied by a form-based HTML\n"
+"              login page."
+msgstr ""
+
+#: acct_mgr/templates/admin_accountsconfig.html:173
+msgid ""
+"If you enable this feature, you'll want to review and adjust\n"
+"              some more options related to session authentication.\n"
+"              Note, that AccountManagerPlugin's LoginModule [1:changes "
+"the\n"
+"              default lifetime of authentication cookies to 30 days]."
+msgstr ""
+
+#: acct_mgr/templates/admin_accountsconfig.html:182
+msgid "AccountManagerPlugin Authentication Options"
+msgstr ""
+
+#: acct_mgr/templates/admin_accountsconfig.html:187
+msgid "Integrate links to related actions into the login form."
+msgstr ""
+
+#: acct_mgr/templates/admin_accountsconfig.html:190
+msgid ""
+"[1:\n"
+"                  If enabled, links to\n"
+"                ]\n"
+"                [2:\n"
+"                  [3:\n"
+"                    [4:Lost password/Password reset]\n"
+"                  ]\n"
+"                  [5:\n"
+"                    [6:Registration for new users]\n"
+"                  ]\n"
+"                ]\n"
+"                [7:\n"
+"                  that normally reside in Trac's meta-navigation bar, "
+"will\n"
+"                  appear inside the login form.  CSS styling allows "
+"further\n"
+"                  customization of the login prompt.\n"
+"                ]"
+msgstr ""
+
+#: acct_mgr/templates/admin_accountsconfig.html:213
+#, fuzzy
+msgid ""
+"Allow the user to be remembered across sessions without\n"
+"                needing to re-authenticate."
 msgstr ""
 "Разрешить запоминать пользователей между посещениями и осуществлять вход "
 "без повторной аутентификации?"
 
-#: acct_mgr/templates/admin_accountsconfig.html:81
+#: acct_mgr/templates/admin_accountsconfig.html:217
 msgid ""
 "This is, user checks a \"Remember Me\"\n"
-"          [1:checkbox] and, next time he visits the site within\n"
-"          30 days, he'll be remembered and automatically authenticated."
+"                [1:checkbox] in the AccountManagerPlugin login form and,\n"
+"                next time he visits the site within 30 days, he'll be\n"
+"                remembered and authenticated automatically."
 msgstr ""
 
-#: acct_mgr/templates/admin_accountsconfig.html:88
-msgid "Password Reset"
-msgstr "Сброс пароля"
+#: acct_mgr/templates/admin_accountsconfig.html:224
+msgid ""
+"Likelihood of session cookie ID change:\n"
+"                [1:]\n"
+"                % per work hour"
+msgstr ""
 
-#: acct_mgr/templates/admin_accountsconfig.html:91
+#: acct_mgr/templates/admin_accountsconfig.html:231
+msgid ""
+"Driving a refresh process to decrease vulnerability of\n"
+"                long-lasting sessions.  Zero means [1:never]."
+msgstr ""
+
+#: acct_mgr/templates/admin_accountsconfig.html:237
+msgid "Path for authentication cookie:"
+msgstr ""
+
+#: acct_mgr/templates/admin_accountsconfig.html:243
+msgid ""
+"This enables AccountManagerPlugin's authentication data\n"
+"                distribution to Trac instances with matching cookie path."
+"\n"
+"                Set this to a common base path of several Trac instances "
+"to\n"
+"                share the cookie, providing a cheap [1:Single-Sign-On]\n"
+"                experience."
+msgstr ""
+
+#: acct_mgr/templates/admin_accountsconfig.html:259
+#, fuzzy
+msgid "Password store icon"
+msgstr "Неправильный пароль."
+
+#: acct_mgr/templates/admin_accountsconfig.html:262
+msgid "Objective for configuring a Password Store"
+msgstr ""
+
+#: acct_mgr/templates/admin_accountsconfig.html:263
+msgid ""
+"AccountManagerPlugin manages user credentials in a modular\n"
+"              back-end providing access to at least one password store."
+msgstr ""
+
+#: acct_mgr/templates/admin_accountsconfig.html:269
+msgid "Initial Authentication Back-end selection"
+msgstr ""
+
+#: acct_mgr/templates/admin_accountsconfig.html:276
+msgid "Use a password store embedded into Trac db."
+msgstr ""
+
+#: acct_mgr/templates/admin_accountsconfig.html:279
+msgid ""
+"The [1:SessionStore] implements password\n"
+"                  storage in Trac db table 'session_attributes'.\n"
+"                  Its the default choice mainly for avoiding additional\n"
+"                  dependencies like directory and file permissions."
+msgstr ""
+
+#: acct_mgr/templates/admin_accountsconfig.html:285
+msgid ""
+"While great to resolve some concurrent access issues too,\n"
+"                  this password store has shortcomings as well.  Notably "
+"it\n"
+"                  does not support seamless hash type migration, and its "
+"no\n"
+"                  candidate for shared use by multiple Trac instances or "
+"even\n"
+"                  by applications beyond Trac."
+msgstr ""
+
+#: acct_mgr/templates/admin_accountsconfig.html:293
+#: acct_mgr/templates/admin_accountsconfig.html:334
+#: acct_mgr/templates/admin_accountsconfig.html:355
+#: acct_mgr/templates/admin_accountsconfig.html:378
+#: acct_mgr/templates/admin_accountsconfig.html:407
+#: acct_mgr/templates/admin_accountsconfig.html:944
+msgid "Details (Preview)"
+msgstr ""
+
+#: acct_mgr/templates/admin_accountsconfig.html:296
+#: acct_mgr/templates/admin_accountsconfig.html:410
+msgid ""
+"Please apply these default options first. You'll be\n"
+"                      able to change values afterwards."
+msgstr ""
+
+#: acct_mgr/templates/admin_accountsconfig.html:307
+msgid "Use a file-based password store."
+msgstr ""
+
+#: acct_mgr/templates/admin_accountsconfig.html:310
+msgid ""
+"AccountManagerPlugin includes native support for common\n"
+"                  Apache file formats 'htpasswd' and 'htdigest' as well "
+"as\n"
+"                  support for reading svnserve's password file format."
+msgstr ""
+
+#: acct_mgr/templates/admin_accountsconfig.html:315
+msgid ""
+"You may use the same file for several Trac environments.\n"
+"                  Note that setting appropriate directory and file "
+"permissions\n"
+"                  is crucial for these stores, but not covered by this\n"
+"                  configuration wizard."
+msgstr ""
+
+#: acct_mgr/templates/admin_accountsconfig.html:324
+msgid ""
+"[1:]\n"
+"                    'htdigest' format\n"
+"                    [2:([3:HtDigestStore])]"
+msgstr ""
+
+#: acct_mgr/templates/admin_accountsconfig.html:337
+#: acct_mgr/templates/admin_accountsconfig.html:358
+#: acct_mgr/templates/admin_accountsconfig.html:381
+msgid ""
+"Please apply these default options first. You'll be\n"
+"                        able to change values afterwards."
+msgstr ""
+
+#: acct_mgr/templates/admin_accountsconfig.html:345
+msgid ""
+"[1:]\n"
+"                    'htpasswd' format\n"
+"                    [2:([3:HtPasswdStore])]"
+msgstr ""
+
+#: acct_mgr/templates/admin_accountsconfig.html:366
+msgid ""
+"[1:]\n"
+"                    svnserve's password file format\n"
+"                    [2:\n"
+"                        ([3:SvnServePasswordStore])\n"
+"                    ]"
+msgstr ""
+
+#: acct_mgr/templates/admin_accountsconfig.html:394
+msgid "Delegate authentication using HTTP authentication."
+msgstr ""
+
+#: acct_mgr/templates/admin_accountsconfig.html:397
+msgid ""
+"AccountManagerPlugin enables use of standard HTTP-Auth\n"
+"                  by its [1:HttpAuthStore] component.  Both\n"
+"                  Basic and Digest authentication challenges are "
+"supported."
+msgstr ""
+
+#: acct_mgr/templates/admin_accountsconfig.html:402
+msgid ""
+"In addition to being read-only this password store does not\n"
+"                  even support listing users for obvious reasons."
+msgstr ""
+
+#: acct_mgr/templates/admin_accountsconfig.html:425
+msgid "Use a different password store."
+msgstr ""
+
+#: acct_mgr/templates/admin_accountsconfig.html:428
+msgid ""
+"AccountManagerPlugin's modular password store concept\n"
+"                  encourages creation of more ways to provide user "
+"credential\n"
+"                  beyond the natively supported stores.  While specific "
+"setup\n"
+"                  assistance for these 3rd-party authentication providers"
+" is not\n"
+"                  implemented, you may fill-in approprate configuration "
+"details\n"
+"                  for an already installed component below."
+msgstr ""
+
+#: acct_mgr/templates/admin_accountsconfig.html:441
+msgid ""
+"Type the custom configuration options as provided by that\n"
+"                    components documentation and apply it."
+msgstr ""
+
+#: acct_mgr/templates/admin_accountsconfig.html:451
+msgid "Password Store Configuration"
+msgstr ""
+
+#: acct_mgr/templates/admin_accountsconfig.html:452
+#, python-format
+msgid ""
+"All enabled stores are listed below, but most won't work at\n"
+"                all without additional configuration.[1:]\n"
+"                Currently configured:\n"
+"                [2:\n"
+"                  %(store_list)s\n"
+"                ]"
+msgstr ""
+
+#: acct_mgr/templates/admin_accountsconfig.html:460
+msgid "This is an experts-only type of store configuration."
+msgstr ""
+
+#: acct_mgr/templates/admin_accountsconfig.html:464
+#, python-format
+msgid ""
+"[1:Required disabled component(s):\n"
+"                  [2:%(components)s]]"
+msgstr ""
+
+#: acct_mgr/templates/admin_accountsconfig.html:469
+msgid ""
+"Select one or more stores and configure related options.\n"
+"                Concurrent use of multiple password stores is supported "
+"too."
+msgstr ""
+
+#: acct_mgr/templates/admin_accountsconfig.html:473
+msgid "Password stores are queried in turn, so order matters."
+msgstr ""
+
+#: acct_mgr/templates/admin_accountsconfig.html:519
+msgid "Silently update password hashes on next successful login."
+msgstr "Молча обновить хэш пароля при следующем удачном входе."
+
+#: acct_mgr/templates/admin_accountsconfig.html:522
+msgid ""
+"Use it after changing hash type or to migrate to a new\n"
+"                  primary password store."
+msgstr ""
+
+#: acct_mgr/templates/admin_accountsconfig.html:526
+msgid ""
+"The update will run only once.  Restarting the procedure\n"
+"                  for all accounts allows to propagate subsequent changes."
+msgstr ""
+
+#: acct_mgr/templates/admin_accountsconfig.html:531
+msgid "Restart"
+msgstr ""
+
+#: acct_mgr/templates/admin_accountsconfig.html:543
+#, fuzzy
+msgid "Password refresh icon"
+msgstr "Обновление пароля"
+
+#: acct_mgr/templates/admin_accountsconfig.html:546
+msgid "Objective for Password Policy rules"
+msgstr ""
+
+#: acct_mgr/templates/admin_accountsconfig.html:547
+msgid ""
+"While AccountManagerPlugin does not enforce password rules in\n"
+"              general, there are some other ways to alter password "
+"handling."
+msgstr ""
+
+#: acct_mgr/templates/admin_accountsconfig.html:556
+#, fuzzy
+msgid "Enable the password reset procedure."
+msgstr "Процедура сброса пароля не разрешена."
+
+#: acct_mgr/templates/admin_accountsconfig.html:559
+msgid ""
+"It relies on a working email sender for Trac, supporting both\n"
+"                TracAnnouncer and TracNotification."
+msgstr ""
+
+#: acct_mgr/templates/admin_accountsconfig.html:565
+msgid ""
+"Length of the randomly-generated passwords:\n"
+"                [1:]\n"
+"                characters"
+msgstr ""
+
+#: acct_mgr/templates/admin_accountsconfig.html:573
+msgid "These passwords are used as alternative passwords on request."
+msgstr ""
+
+#: acct_mgr/templates/admin_accountsconfig.html:581
 msgid "Force users to change passwords after a password reset."
 msgstr "Заставить пользователей менять пароль после его сброса."
 
-#: acct_mgr/templates/admin_accountsconfig.html:97
-msgid "Verify email"
-msgstr "Подтверждения адреса"
+#: acct_mgr/templates/admin_accountsconfig.html:592
+msgid "Account approval icon"
+msgstr ""
 
-#: acct_mgr/templates/admin_accountsconfig.html:100
+#: acct_mgr/templates/admin_accountsconfig.html:595
+msgid "Objective for Account Registration and Verification rules"
+msgstr ""
+
+#: acct_mgr/templates/admin_accountsconfig.html:596
+msgid ""
+"You may require administrative approval of new accounts for the\n"
+"              user registration process.  The ability to immediately ban\n"
+"              existing accounts is another, related but independed "
+"feature."
+msgstr ""
+
+#: acct_mgr/templates/admin_accountsconfig.html:606
+msgid "Allow administrative user ID changes."
+msgstr ""
+
+#: acct_mgr/templates/admin_accountsconfig.html:615
+#, fuzzy
+msgid "Allow users to register for a new account."
+msgstr "Для этой учетной записи не задан электронный адрес."
+
+#: acct_mgr/templates/admin_accountsconfig.html:624
+msgid "Allow users to delete their own account."
+msgstr ""
+
+#: acct_mgr/templates/admin_accountsconfig.html:629
+msgid "Checks to use for validating Registration requests"
+msgstr ""
+
+#: acct_mgr/templates/admin_accountsconfig.html:630
+#, python-format
+msgid ""
+"All checks provided by AccountManagerPlugin are enabled per\n"
+"              default, but some are configurable on their own.[1:]\n"
+"              Currently configured:\n"
+"              [2:\n"
+"                %(check_list)s\n"
+"              ]"
+msgstr ""
+
+#: acct_mgr/templates/admin_accountsconfig.html:638
+msgid ""
+"Checks like [1:BotTrapCheck] won't work at all\n"
+"              without additional configuration."
+msgstr ""
+
+#: acct_mgr/templates/admin_accountsconfig.html:643
+#, python-format
+msgid ""
+"[1:Required disabled component(s):\n"
+"                [2:%(components)s]]"
+msgstr ""
+
+#: acct_mgr/templates/admin_accountsconfig.html:648
+msgid ""
+"Select one or more checks and configure related options.\n"
+"              Concurrent use of multiple registration checks is "
+"encouraged."
+msgstr ""
+
+#: acct_mgr/templates/admin_accountsconfig.html:652
+msgid ""
+"Checks are applied in turn, so order matters.  Note that some\n"
+"              checks are used to validate admin user actions too."
+msgstr ""
+
+#: acct_mgr/templates/admin_accountsconfig.html:698
+msgid "Other Account Policy options"
+msgstr ""
+
+#: acct_mgr/templates/admin_accountsconfig.html:704
+msgid "Require administrative account approval after registration."
+msgstr ""
+
+#: acct_mgr/templates/admin_accountsconfig.html:707
+msgid ""
+"For admin notification on registration time it relies on a\n"
+"                  working email sender for Trac, supporting both "
+"TracAnnouncer\n"
+"                  and TracNotification."
+msgstr ""
+
+#: acct_mgr/templates/admin_accountsconfig.html:718
 msgid "Force users to verify their email addresses."
 msgstr "Заставить пользователей подтверждать свой электронный адрес."
 
-#: acct_mgr/templates/admin_accountsconfig.html:105
-#: acct_mgr/templates/admin_accountsnotification.html:51
-msgid "Save"
-msgstr "Сохранить"
+#: acct_mgr/templates/admin_accountsconfig.html:721
+msgid ""
+"For sending a verificaton token to the user it relies on a\n"
+"                working email sender for Trac, supporting both "
+"TracAnnouncer\n"
+"                and TracNotification."
+msgstr ""
+
+#: acct_mgr/templates/admin_accountsconfig.html:734
+msgid "Account guard icon"
+msgstr ""
+
+#: acct_mgr/templates/admin_accountsconfig.html:737
+msgid "Objective for Account Protection rules"
+msgstr ""
+
+#: acct_mgr/templates/admin_accountsconfig.html:738
+msgid ""
+"Passwords are often not constructed as carefully as they should\n"
+"              be.  And even a strong passphrase could be sift out, if an\n"
+"              attacker is able to test millions of variants in hours, if "
+"not\n"
+"              seconds.  Firewalls and full-featured web-servers already "
+"offer\n"
+"              sophisticated protection, if one can afford them, handle "
+"their\n"
+"              installation, configuration and maintenance."
+msgstr ""
+
+#: acct_mgr/templates/admin_accountsconfig.html:746
+msgid ""
+"The [1:AccountGuard] component is another option.\n"
+"              It is an add-on to AccountManagerPlugin's own\n"
+"              [2:LoginModule] and provides account protection\n"
+"              by discouraging brute-force login attempts."
+msgstr ""
+
+#: acct_mgr/templates/admin_accountsconfig.html:759
+msgid "Enable the guard add-on component."
+msgstr ""
+
+#: acct_mgr/templates/admin_accountsconfig.html:762
+msgid "AccountManagerPlugin's LoginModule is disabled."
+msgstr ""
+
+#: acct_mgr/templates/admin_accountsconfig.html:768
+#, fuzzy
+msgid "Failed login attempt count max:"
+msgstr "Всего неудачных попыток: %(count)s"
+
+#: acct_mgr/templates/admin_accountsconfig.html:775
+msgid ""
+"Lock user account after the specified number of failed\n"
+"                  attempts.  Value zero means [1:no limit]."
+msgstr ""
+
+#: acct_mgr/templates/admin_accountsconfig.html:782
+#, fuzzy
+msgid ""
+"Drop lock after\n"
+"                    [1:]\n"
+"                    seconds"
+msgstr ""
+"Учетная запись заблокирована, пожалуйста повторите попытку через "
+"%(release_time)s"
+
+#: acct_mgr/templates/admin_accountsconfig.html:789
+msgid "Zero means [1:unlimited] lock time here."
+msgstr ""
+
+#: acct_mgr/templates/admin_accountsconfig.html:795
+msgid "Lock time progression factor:"
+msgstr ""
+
+#: acct_mgr/templates/admin_accountsconfig.html:802
+msgid ""
+"Extend user account lock duration incrementally.\n"
+"                      It uses logarithmic calculation with the factor as\n"
+"                      exponent, accepting decimal numbers >= 1."
+msgstr ""
+
+#: acct_mgr/templates/admin_accountsconfig.html:807
+msgid ""
+"Lock time will grow for any value > 1, if the failure\n"
+"                      happens before lock expiration.  I.e. value '2' "
+"means"
+msgstr ""
+
+#: acct_mgr/templates/admin_accountsconfig.html:811
+msgid ""
+"[1:[2:\n"
+"                        double lock time after 2nd failure,]\n"
+"                      ]\n"
+"                      [3:[4:\n"
+"                        four times the initial lock time after 3rd,]\n"
+"                      ]\n"
+"                      [5:[6:\n"
+"                        eight times as long after 4th failure, etc.]\n"
+"                      ]"
+msgstr ""
+
+#: acct_mgr/templates/admin_accountsconfig.html:822
+msgid ""
+"At any time after lock expiration a login failure will\n"
+"                      just trigger a lock and set a new lock timeout, but"
+" not\n"
+"                      extend the total lock duration."
+msgstr ""
+
+#: acct_mgr/templates/admin_accountsconfig.html:832
+msgid "Upper lock time limit:"
+msgstr ""
+
+#: acct_mgr/templates/admin_accountsconfig.html:837
+msgid "seconds"
+msgstr ""
+
+#: acct_mgr/templates/admin_accountsconfig.html:845
+msgid "This is relevant only with a progression factor > 1."
+msgstr ""
+
+#: acct_mgr/templates/admin_accountsconfig.html:860
+msgid "Objective for additional preparation"
+msgstr ""
+
+#: acct_mgr/templates/admin_accountsconfig.html:861
+msgid "Enable yourself to proceed beyond this initial setup."
+msgstr ""
+
+#: acct_mgr/templates/admin_accountsconfig.html:864
+#, fuzzy
+msgid "Initial Admin Account"
+msgstr "Зарегистрировать учетную запись"
+
+#: acct_mgr/templates/admin_accountsconfig.html:866
+#, fuzzy
+msgid "Add Admin Account:"
+msgstr "Добавить/изменить пользователя:"
+
+#: acct_mgr/templates/admin_accountsconfig.html:867
+msgid ""
+"The user will get [1:TRAC_ADMIN] assigned, that\n"
+"                  inherits all available permissions.  One such account "
+"is\n"
+"                  required to configure Trac via the admin web-UI.  "
+"Create and\n"
+"                  manage more limitted admin accounts as well as actual "
+"user\n"
+"                  accounts on your own later via the Accounts admin panel."
+msgstr ""
+
+#: acct_mgr/templates/admin_accountsconfig.html:874
+msgid ""
+"In detail: AccountManagerPlugin requires\n"
+"                  [1:ACCTMGR_USER_ADMIN] for regular user\n"
+"                  administration, [2:ACCTMGR_CONFIG_ADMIN] for\n"
+"                  viewing these pages and changing the configuration "
+"later.\n"
+"                  Both are inherited by [3:ACCTMGR_ADMIN]\n"
+"                  permission.  To assign permissions you'll need\n"
+"                  [4:PERMISSION_GRANT] inherited by\n"
+"                  [5:PERMISSION_ADMIN] too."
+msgstr ""
+
+#: acct_mgr/templates/admin_accountsconfig.html:885
+#: acct_mgr/templates/admin_users.html:86 acct_mgr/templates/login.html:33
+#: acct_mgr/templates/register.html:36
+#: acct_mgr/templates/reset_password.html:32
+msgid "Username:"
+msgstr "Имя пользователя:"
+
+#: acct_mgr/templates/admin_accountsconfig.html:889
+#: acct_mgr/templates/admin_users.html:90 acct_mgr/templates/register.html:41
+msgid "Only lowercase usernames allowed"
+msgstr ""
+
+#: acct_mgr/templates/admin_accountsconfig.html:908
+msgid ""
+"Please take care, that the username is known by the HTTP\n"
+"                  authentication provider."
+msgstr ""
+
+#: acct_mgr/templates/admin_accountsconfig.html:912
+msgid ""
+"Please take care for a valid username, because no\n"
+"                  configured password store supports creating a new "
+"account."
+msgstr ""
+
+#: acct_mgr/templates/admin_accountsconfig.html:917
+#: acct_mgr/templates/admin_users.html:133
+msgid " Add "
+msgstr " Добавить "
+
+#: acct_mgr/templates/admin_accountsconfig.html:922
+msgid "Check-up"
+msgstr ""
+
+#: acct_mgr/templates/admin_accountsconfig.html:931
+msgid "Please resolve all issues marked as critical."
+msgstr ""
+
+#: acct_mgr/templates/admin_accountsconfig.html:935
+msgid ""
+"By now you did almost finish AccountManagerPlugin\n"
+"                configuration, but any changes are temporary yet. Please "
+"test\n"
+"                and adjust the configuration as required, or cancel to "
+"revert\n"
+"                all changes.  Apply settings to [1:trac.ini] only if you\n"
+"                really want to preserve them permanently."
+msgstr ""
+
+#: acct_mgr/templates/admin_accountsconfig.html:978
+msgid "Stay on page"
+msgstr ""
+
+#: acct_mgr/templates/admin_accountsconfig.html:981
+msgid "Save changes and exit wizard"
+msgstr ""
+
+#: acct_mgr/templates/admin_accountsconfig.html:985
+msgid "Drop unsaved changes"
+msgstr ""
+
+#: acct_mgr/templates/admin_accountsconfig.html:991
+msgid "Drop changes and exit wizard"
+msgstr ""
+
+#: acct_mgr/templates/admin_accountsconfig.html:991
+msgid "Cancel"
+msgstr ""
 
 #: acct_mgr/templates/admin_accountsnotification.html:14
 #: acct_mgr/templates/admin_accountsnotification.html:18
@@ -794,121 +1906,90 @@ msgstr ""
 "Список электронных адресов и/или имен пользователей, которые уведомляются"
 " об этих действиях (через пробел):"
 
-#: acct_mgr/templates/admin_users.html:18
-msgid "Manage User Accounts"
-msgstr "Управление пользователями"
-
-#: acct_mgr/templates/admin_users.html:26
-#, python-format
-msgid "Successfully updated: %(success)s"
-msgstr "Удачно обновлено: %(success)s"
-
-#: acct_mgr/templates/admin_users.html:31
-msgid "Add/Edit Account:"
-msgstr "Добавить/изменить пользователя:"
-
-#: acct_mgr/templates/admin_users.html:33 acct_mgr/templates/login.html:33
-#: acct_mgr/templates/register.html:36
-#: acct_mgr/templates/reset_password.html:53
-msgid "Username:"
-msgstr "Имя пользователя:"
-
-#: acct_mgr/templates/admin_users.html:36 acct_mgr/templates/register.html:40
-msgid "Only lowercase usernames allowed"
-msgstr ""
-
-#: acct_mgr/templates/admin_users.html:41 acct_mgr/templates/login.html:38
-#: acct_mgr/templates/prefs_account.html:30 acct_mgr/templates/register.html:45
-msgid "Password:"
-msgstr "Пароль:"
-
-#: acct_mgr/templates/admin_users.html:49
-#: acct_mgr/templates/prefs_account.html:74 acct_mgr/templates/register.html:51
-msgid "Confirm Password:"
-msgstr "Подтверждение пароля:"
-
-#: acct_mgr/templates/admin_users.html:57
-msgid "Pre-/Surname (Nickname):"
-msgstr "Фамилия (ник):"
-
-#: acct_mgr/templates/admin_users.html:62
-#: acct_mgr/templates/reset_password.html:58
-msgid "Email Address:"
-msgstr "Электронный адрес:"
-
-#: acct_mgr/templates/admin_users.html:67
-msgid "Skip new email verification"
-msgstr ""
-
-#: acct_mgr/templates/admin_users.html:70
-msgid "Add a new user account or edit an existing one."
-msgstr "Добавить нового пользователя или редактировать существующего."
-
-#: acct_mgr/templates/admin_users.html:72
-msgid " Add "
-msgstr " Добавить "
-
-#: acct_mgr/templates/admin_users.html:75
-msgid " Change "
-msgstr " Изменить "
-
-#: acct_mgr/templates/admin_users.html:84
-msgid "This password store does not support listing users."
-msgstr "Это хранилище паролей не поддерживает перечисление пользователей."
-
-#: acct_mgr/templates/admin_users.html:91
-msgid "Send another random password"
-msgstr ""
-
-#: acct_mgr/templates/admin_users.html:91
-msgid "Reset passwords"
-msgstr "Сбросить пароли"
-
-#: acct_mgr/templates/admin_users.html:95
-msgid "Remove selected accounts"
-msgstr "Удалить выбранных"
-
-#: acct_mgr/templates/admin_users.html:98
-msgid "Review account attributes"
-msgstr ""
-
-#: acct_mgr/templates/db_cleanup.html:14 acct_mgr/templates/db_cleanup.html:23
+#: acct_mgr/templates/admin_db_cleanup.html:14
+#: acct_mgr/templates/admin_db_cleanup.html:18
 msgid "Accounts: Cleanup"
 msgstr ""
 
-#: acct_mgr/templates/db_cleanup.html:30
-msgid ""
-"Max accounts per page\n"
-"          [1:]"
-msgstr ""
-
-#: acct_mgr/templates/db_cleanup.html:44
-#, python-format
-msgid "Accounts (%(slice)s)"
-msgstr ""
-
-#: acct_mgr/templates/db_cleanup.html:57
+#: acct_mgr/templates/admin_db_cleanup.html:30
 msgid "Attribute"
 msgstr ""
 
-#: acct_mgr/templates/db_cleanup.html:58
+#: acct_mgr/templates/admin_db_cleanup.html:31
 msgid "Value"
 msgstr ""
 
-#: acct_mgr/templates/db_cleanup.html:63
-msgid "Not Authenticated Accounts"
-msgstr ""
-
-#: acct_mgr/templates/db_cleanup.html:90
+#: acct_mgr/templates/admin_db_cleanup.html:65
 msgid "Authenticated Accounts"
 msgstr ""
 
-#: acct_mgr/templates/db_cleanup.html:121
+#: acct_mgr/templates/admin_db_cleanup.html:97
 msgid "Remove selected entries"
 msgstr ""
 
-#: acct_mgr/templates/db_cleanup.html:123
+#: acct_mgr/templates/admin_db_cleanup.html:99
 msgid "Undo selection"
+msgstr ""
+
+#: acct_mgr/templates/admin_users.html:84
+#, fuzzy
+msgid "Add New Account:"
+msgstr "Добавить/изменить пользователя:"
+
+#: acct_mgr/templates/admin_users.html:141
+msgid "This password store does not support listing users."
+msgstr "Это хранилище паролей не поддерживает перечисление пользователей."
+
+#: acct_mgr/templates/admin_users.html:146
+msgid "Max accounts per page [1:]"
+msgstr ""
+
+#: acct_mgr/templates/admin_users.html:152
+#: acct_mgr/templates/admin_users.html:175
+msgid "Update"
+msgstr "Обновить"
+
+#: acct_mgr/templates/admin_users.html:164
+msgid "Filters"
+msgstr ""
+
+#: acct_mgr/templates/admin_users.html:165
+#, fuzzy
+msgid "Account filters"
+msgstr "Учетные записи"
+
+#: acct_mgr/templates/admin_users.html:166
+msgid "Status"
+msgstr ""
+
+#: acct_mgr/templates/admin_users.html:190
+msgid "Send another random password"
+msgstr ""
+
+#: acct_mgr/templates/admin_users.html:190
+msgid "Reset passwords"
+msgstr "Сбросить пароли"
+
+#: acct_mgr/templates/admin_users.html:194
+msgid "Approve pending registrations, ban/unban accounts"
+msgstr ""
+
+#: acct_mgr/templates/admin_users.html:194
+msgid "Toggle account approval"
+msgstr ""
+
+#: acct_mgr/templates/admin_users.html:197
+#, fuzzy
+msgid "Delete accounts"
+msgstr "Удалить учетную запись"
+
+#: acct_mgr/templates/admin_users.html:197
+#, fuzzy
+msgid "Remove selected items"
+msgstr "Удалить выбранных"
+
+#: acct_mgr/templates/admin_users.html:202
+msgid "Review account attributes"
 msgstr ""
 
 #: acct_mgr/templates/login.html:14 acct_mgr/templates/login.html:26
@@ -920,30 +2001,39 @@ msgstr "Вход"
 msgid "Remember me"
 msgstr "Запомнить меня"
 
-#: acct_mgr/templates/login.html:79 acct_mgr/templates/prefs_account.html:23
-#: acct_mgr/templates/prefs_account.html:50
-#: acct_mgr/templates/prefs_account.html:57 acct_mgr/templates/register.html:27
-#: acct_mgr/templates/reset_password.html:45
+#: acct_mgr/templates/login.html:79 acct_mgr/templates/register.html:27
 msgid "Error"
 msgstr "Ошибка"
 
-#: acct_mgr/templates/prefs_account.html:20
+#: acct_mgr/templates/prefs_account.html:23
 msgid "Delete Account"
 msgstr "Удалить учетную запись"
 
-#: acct_mgr/templates/prefs_account.html:37
+#: acct_mgr/templates/prefs_account.html:34
 msgid "Delete account"
 msgstr "Удалить учетную запись"
 
-#: acct_mgr/templates/prefs_account.html:54
+#: acct_mgr/templates/prefs_account.html:40
+msgid "API Key"
+msgstr ""
+
+#: acct_mgr/templates/prefs_account.html:44
+msgid "API Key:"
+msgstr ""
+
+#: acct_mgr/templates/prefs_account.html:50
+msgid "Refresh API Key"
+msgstr ""
+
+#: acct_mgr/templates/prefs_account.html:83
 msgid "Change Password"
 msgstr "Изменить пароль"
 
-#: acct_mgr/templates/prefs_account.html:62
+#: acct_mgr/templates/prefs_account.html:85
 msgid "Old Password:"
 msgstr "Старый пароль:"
 
-#: acct_mgr/templates/prefs_account.html:68
+#: acct_mgr/templates/prefs_account.html:91
 msgid "New Password:"
 msgstr "Новый пароль:"
 
@@ -955,15 +2045,15 @@ msgstr "Зарегистрировать учетную запись"
 msgid "Required"
 msgstr "Обязательно"
 
-#: acct_mgr/templates/register.html:63
+#: acct_mgr/templates/register.html:64
 msgid "Optional"
 msgstr "На выбор"
 
-#: acct_mgr/templates/register.html:65
+#: acct_mgr/templates/register.html:66
 msgid "Name:"
 msgstr "Имя:"
 
-#: acct_mgr/templates/register.html:76
+#: acct_mgr/templates/register.html:77
 msgid "Create account"
 msgstr "Создать учетную запись"
 
@@ -972,35 +2062,16 @@ msgstr "Создать учетную запись"
 msgid "Reset Password"
 msgstr "Сбросить пароль"
 
-#: acct_mgr/templates/reset_password.html:28
-msgid "Already logged in"
-msgstr "Вы уже вошли"
-
-#: acct_mgr/templates/reset_password.html:29
-msgid ""
-"You're already logged in. If you need to change\n"
-"          your password please use the\n"
-"          [1:Account Preferences] page."
-msgstr ""
-"Вы уже вошли. Если вам нужно сменить пароль, используйте страницу "
-"[1:Предпочтения]."
-
-#: acct_mgr/templates/reset_password.html:35
-#, python-format
-msgid ""
-"A new password\n"
-"        has been emailed to you at %(email)s ."
-msgstr "Новый пароль отправлен на ваш адрес %(email)s ."
-
-#: acct_mgr/templates/reset_password.html:40
+#: acct_mgr/templates/reset_password.html:25
+#, fuzzy
 msgid ""
 "If you've forgotten your password, enter your username and\n"
-"        email address below and you'll be emailed a new password."
+"        email address below, and a new password will be sent to you."
 msgstr ""
 "Если вы забыли пароль, введите ваше имя пользователя и почтовый адрес "
 "ниже, и вам будет выслан новый пароль."
 
-#: acct_mgr/templates/reset_password.html:63
+#: acct_mgr/templates/reset_password.html:43
 msgid "Reset password"
 msgstr "Сброс пароля"
 
@@ -1016,7 +2087,7 @@ msgstr "Электронный адрес"
 msgid "Last Login"
 msgstr "Последний вход"
 
-#: acct_mgr/templates/user_table.html:41
+#: acct_mgr/templates/user_table.html:47
 msgid "Permanently locked"
 msgstr "Заблокирован навсегда"
 
@@ -1053,4 +2124,169 @@ msgstr "Проверить"
 #: acct_mgr/templates/verify_email.html:42
 msgid "Resend Email"
 msgstr "Послать снова"
+
+#~ msgid ""
+#~ "Error while reading configuration -\n"
+#~ "                              Hint: Enable/install "
+#~ "the required component."
+#~ msgstr ""
+
+#~ msgid "The password store does not support creating users."
+#~ msgstr "Хранилище паролей не поддерживает создание пользователей."
+
+#~ msgid "Unknown user %(user)s."
+#~ msgstr "Неизвестный пользователь %(user)s."
+
+#~ msgid ""
+#~ "The password store does not support\n"
+#~ "                                changing passwords.\n"
+#~ "                                "
+#~ msgstr "Хранилище паролей не поддерживает изменение паролей."
+
+#~ msgid ""
+#~ "Please type [%(token)s] as verification token,\n"
+#~ "                exactly replicating everything within the braces."
+#~ msgstr ""
+
+#~ msgid "Please change your password now."
+#~ msgstr "Теперь, пожалуйста, смените пароль."
+
+#~ msgid "Review User Account Details"
+#~ msgstr "Проверьте детали учетной записи"
+
+#~ msgid "for [1:%(name)s] ([2:%(user)s])"
+#~ msgstr "для [1:%(name)s] ([2:%(user)s])"
+
+#~ msgid "for [1:%(user)s]"
+#~ msgstr "для [1:%(user)s]"
+
+#~ msgid "Verification"
+#~ msgstr "Проверка"
+
+#~ msgid "Back to accounts"
+#~ msgstr ""
+
+#~ msgid "Persistent Sessions"
+#~ msgstr "Хранимые сеансы"
+
+#~ msgid ""
+#~ "This is, user checks a \"Remember Me\"\n"
+#~ "          [1:checkbox] and, next time he visits the site within\n"
+#~ "          30 days, he'll be remembered and automatically authenticated."
+#~ msgstr ""
+
+#~ msgid "Verify email"
+#~ msgstr "Подтверждения адреса"
+
+#~ msgid "Successfully updated: %(success)s"
+#~ msgstr "Удачно обновлено: %(success)s"
+
+#~ msgid "Add a new user account or edit an existing one."
+#~ msgstr "Добавить нового пользователя или редактировать существующего."
+
+#~ msgid " Change "
+#~ msgstr " Изменить "
+
+#~ msgid ""
+#~ "Max accounts per page\n"
+#~ "          [1:]"
+#~ msgstr ""
+
+#~ msgid "Accounts (%(slice)s)"
+#~ msgstr ""
+
+#~ msgid "Not Authenticated Accounts"
+#~ msgstr ""
+
+#~ msgid "Already logged in"
+#~ msgstr "Вы уже вошли"
+
+#~ msgid "Successfully deleted:"
+#~ msgstr ""
+
+#~ msgid "Ordered list of password stores, queried in turn."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The authentication backend for user %s does not support\n"
+#~ "                setting the password.\n"
+#~ "                "
+#~ msgstr ""
+
+#~ msgid "%(relativetime)s ago"
+#~ msgstr ""
+
+#~ msgid "IPasswordHashMethod used to create new/updated passwords"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Path relative to Trac environment or full host machine\n"
+#~ "                path to password file"
+#~ msgstr ""
+#~ "Путь к файлу паролей относительно "
+#~ "окружения Trac или полный путь на "
+#~ "сервере"
+
+#~ msgid "Default hash type of new/updated passwords"
+#~ msgstr "Тип хэша поп умолчанию для новых/обновленных паролей"
+
+#~ msgid "Realm to select relevant htdigest file entries"
+#~ msgstr ""
+
+#~ msgid "URL of the HTTP authentication service"
+#~ msgstr "URL служба аутентификации по HTTP"
+
+#~ msgid "Realm to select relevant htdigest db entries"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Another account or group already exists,"
+#~ " who's name differs from %s only "
+#~ "by case or is identical."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Please type [%(token)s] as verification token,\n"
+#~ "                    exactly replicating everything within the braces."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The email address is required for Trac to send\n"
+#~ "                           you a verification token."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Entering your email address will also enable you\n"
+#~ "                           to reset your "
+#~ "password if you ever forget it."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "A collection of checks based on regular expressions.\n"
+#~ "\n"
+#~ "''It depends on !EmailCheck being "
+#~ "enabled too for using it's input "
+#~ "field.\n"
+#~ "Likewise email checking is bypassed, if"
+#~ " account verification is disabled.''"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Your username has been successfully registered but\n"
+#~ "                        your account still "
+#~ "requires activation. Please login\n"
+#~ "                        as user %(user)s, and follow the instructions."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Registration has been finished successfully.\n"
+#~ "                     You may log in as user %(user)s now."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Path to the users file; leave blank to locate\n"
+#~ "                the users file by reading svnserve.conf"
+#~ msgstr ""
+#~ "Путь к файлу пользователей; оставьте пустым чтоб использовать\n"
+#~ "путь, заданный в svnserve.conf"
 
