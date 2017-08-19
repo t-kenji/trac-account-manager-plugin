@@ -393,6 +393,10 @@ class LoginModule(auth.LoginModule, CommonTemplateProvider):
         after processing login form input. Otherwise it will only be set,
         if unset at the time of authentication.""")
 
+    environ_reverse_proxy_auth = Option(
+        'account-manager', 'environ_reverse_proxy_auth', 'HTTP_X_FORWARDED_USER',
+        """Environment variable referenced during reverse proxy authentication.""")
+
     # Update cookies for persistant sessions only 1/day.
     #   hex_entropy returns 32 chars per call equal to 128 bit of entropy,
     #   so it should be technically impossible to explore the hash even within
@@ -461,6 +465,10 @@ class LoginModule(auth.LoginModule, CommonTemplateProvider):
                 self.log.debug("LoginModule.authenticate: Set 'REMOTE_USER' "
                                "= '%s'", username)
                 req.environ['REMOTE_USER'] = username
+        if self.environ_reverse_proxy_auth in req.environ:
+            self.log.info("LoginModule.authenticate: Override 'REMOTE_USER' "
+                          "= '%s'", req.environ[self.environ_reverse_proxy_auth])
+            req.environ['REMOTE_USER'] = req.environ[self.environ_reverse_proxy_auth]
         return auth.LoginModule.authenticate(self, req)
 
     authenticate = if_enabled(authenticate)
